@@ -12,6 +12,7 @@
 		9367125226063E4C00325659 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9367125126063E4C00325659 /* Assets.xcassets */; };
 		9367125526063E4C00325659 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9367125326063E4C00325659 /* LaunchScreen.storyboard */; };
 		9367126126063EB200325659 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9367126026063EB200325659 /* LoginViewController.swift */; };
+		937737F52607982600BCA744 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937737F42607982600BCA744 /* Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		9367125426063E4C00325659 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9367125626063E4C00325659 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9367126026063EB200325659 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		937737F42607982600BCA744 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +56,63 @@
 		9367124726063E4A00325659 /* MyCarr.Onboarding */ = {
 			isa = PBXGroup;
 			children = (
+				937737F22607976100BCA744 /* Extensions */,
 				9367124826063E4A00325659 /* AppDelegate.swift */,
 				9367124A26063E4A00325659 /* SceneDelegate.swift */,
-				9367126026063EB200325659 /* LoginViewController.swift */,
+				937737ED2607969200BCA744 /* Model */,
+				937737F12607972F00BCA744 /* View */,
+				937737EF2607972C00BCA744 /* ViewModel */,
+				937737F02607972D00BCA744 /* Controllers */,
 				9367125126063E4C00325659 /* Assets.xcassets */,
 				9367125326063E4C00325659 /* LaunchScreen.storyboard */,
 				9367125626063E4C00325659 /* Info.plist */,
 			);
 			path = MyCarr.Onboarding;
+			sourceTree = "<group>";
+		};
+		937737ED2607969200BCA744 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		937737EF2607972C00BCA744 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		937737F02607972D00BCA744 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				937737F3260797D600BCA744 /* Authentication */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		937737F12607972F00BCA744 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		937737F22607976100BCA744 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				937737F42607982600BCA744 /* Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		937737F3260797D600BCA744 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				9367126026063EB200325659 /* LoginViewController.swift */,
+			);
+			path = Authentication;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,6 +187,7 @@
 				9367126126063EB200325659 /* LoginViewController.swift in Sources */,
 				9367124926063E4A00325659 /* AppDelegate.swift in Sources */,
 				9367124B26063E4A00325659 /* SceneDelegate.swift in Sources */,
+				937737F52607982600BCA744 /* Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
