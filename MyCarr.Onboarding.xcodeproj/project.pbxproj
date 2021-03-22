@@ -17,6 +17,7 @@
 		93C2CAF92607B7FC002C6714 /* Sen-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 93C2CAF62607B7FC002C6714 /* Sen-Bold.ttf */; };
 		93C2CAFA2607B7FC002C6714 /* Sen-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 93C2CAF72607B7FC002C6714 /* Sen-Regular.ttf */; };
 		93C2CAFB2607B7FC002C6714 /* Sen-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 93C2CAF82607B7FC002C6714 /* Sen-ExtraBold.ttf */; };
+		93C4CCBC26089BB30008C5B9 /* CostumTextFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C4CCBB26089BB30008C5B9 /* CostumTextFields.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		93C2CAF62607B7FC002C6714 /* Sen-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sen-Bold.ttf"; sourceTree = "<group>"; };
 		93C2CAF72607B7FC002C6714 /* Sen-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sen-Regular.ttf"; sourceTree = "<group>"; };
 		93C2CAF82607B7FC002C6714 /* Sen-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sen-ExtraBold.ttf"; sourceTree = "<group>"; };
+		93C4CCBB26089BB30008C5B9 /* CostumTextFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CostumTextFields.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				93C2CAF02607B115002C6714 /* CostumLabel.swift */,
+				93C4CCBB26089BB30008C5B9 /* CostumTextFields.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -207,6 +210,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93C4CCBC26089BB30008C5B9 /* CostumTextFields.swift in Sources */,
 				93C2CAF12607B115002C6714 /* CostumLabel.swift in Sources */,
 				9367126126063EB200325659 /* LoginViewController.swift in Sources */,
 				9367124926063E4A00325659 /* AppDelegate.swift in Sources */,
