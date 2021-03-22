@@ -15,6 +15,7 @@
 		937737F52607982600BCA744 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 937737F42607982600BCA744 /* Extension.swift */; };
 		9385E9622608D2E700604F61 /* CostumButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9385E9612608D2E700604F61 /* CostumButton.swift */; };
 		9385E9652608D65C00604F61 /* CostumTextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9385E9642608D65C00604F61 /* CostumTextButton.swift */; };
+		9385E9682609221C00604F61 /* CostumImageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9385E9672609221C00604F61 /* CostumImageButton.swift */; };
 		93C2CAF12607B115002C6714 /* CostumLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C2CAF02607B115002C6714 /* CostumLabel.swift */; };
 		93C2CAF92607B7FC002C6714 /* Sen-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 93C2CAF62607B7FC002C6714 /* Sen-Bold.ttf */; };
 		93C2CAFA2607B7FC002C6714 /* Sen-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 93C2CAF72607B7FC002C6714 /* Sen-Regular.ttf */; };
@@ -33,6 +34,7 @@
 		937737F42607982600BCA744 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		9385E9612608D2E700604F61 /* CostumButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CostumButton.swift; sourceTree = "<group>"; };
 		9385E9642608D65C00604F61 /* CostumTextButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CostumTextButton.swift; sourceTree = "<group>"; };
+		9385E9672609221C00604F61 /* CostumImageButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CostumImageButton.swift; sourceTree = "<group>"; };
 		93C2CAF02607B115002C6714 /* CostumLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CostumLabel.swift; sourceTree = "<group>"; };
 		93C2CAF62607B7FC002C6714 /* Sen-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sen-Bold.ttf"; sourceTree = "<group>"; };
 		93C2CAF72607B7FC002C6714 /* Sen-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sen-Regular.ttf"; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 				93C2CAF02607B115002C6714 /* CostumLabel.swift */,
 				93C4CCBB26089BB30008C5B9 /* CostumTextFields.swift */,
 				9385E9612608D2E700604F61 /* CostumButton.swift */,
+				9385E9672609221C00604F61 /* CostumImageButton.swift */,
 				9385E9642608D65C00604F61 /* CostumTextButton.swift */,
 			);
 			path = View;
@@ -219,6 +222,7 @@
 				93C4CCBC26089BB30008C5B9 /* CostumTextFields.swift in Sources */,
 				93C2CAF12607B115002C6714 /* CostumLabel.swift in Sources */,
 				9367126126063EB200325659 /* LoginViewController.swift in Sources */,
+				9385E9682609221C00604F61 /* CostumImageButton.swift in Sources */,
 				9367124926063E4A00325659 /* AppDelegate.swift in Sources */,
 				9385E9622608D2E700604F61 /* CostumButton.swift in Sources */,
 				9385E9652608D65C00604F61 /* CostumTextButton.swift in Sources */,
