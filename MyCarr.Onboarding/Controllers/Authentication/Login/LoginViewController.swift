@@ -16,8 +16,9 @@ class LoginViewController : UIViewController {
     let bottomView = UIView()
     
     private let titleLabel = CostumLabel(title: "Zaloguj się", size: 48, color: .white, line: 1)
-    private let emailTextField = CostumTextFields(placeHolder: "enter your email adress")
-    private let passwordTextField = CostumTextFields(placeHolder: "enter your password", isSecure: true)
+    private let emailTextField = CostumTextFields( placeHolder: "enter your email adress", colorText: .white, bottomLinieColor: .white)
+    private let passwordTextField = CostumTextFields(placeHolder: "enter your password", colorText: .white, bottomLinieColor: .white, isSecure: true)
+
     
     private let forgetPasswordButton: UIButton = {
         let button = UIButton()
@@ -89,6 +90,8 @@ class LoginViewController : UIViewController {
     
     @objc func handleForgetButton() {
         print("DEBUG: - Forget Button")
+        let controller = ResetPasswordController()
+        navigationController?.pushViewController(controller, animated: true)
     }
     @objc func handleLoginButton() {
         print("DEBUG: - Login Button")
