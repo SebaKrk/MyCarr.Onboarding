@@ -11,6 +11,7 @@ class CostumTextFields: UITextField {
     
     init(placeHolder: String, isSecure: Bool? = false) {
         super.init(frame: .zero)
+        translatesAutoresizingMaskIntoConstraints = false
         
         let spacer = UIView()
         spacer.heightAnchor.constraint(equalToConstant: 50).isActive = true
@@ -21,8 +22,10 @@ class CostumTextFields: UITextField {
         textColor = .white
         font = UIFont(name: "Sen-Regular", size: 16)
         placeholder = placeHolder
-        attributedPlaceholder = NSAttributedString(string: placeHolder ,attributes: [.foregroundColor: UIColor(white: 1, alpha: 0.3)])
+        attributedPlaceholder = NSAttributedString(string: placeHolder ,attributes: [.foregroundColor: UIColor(white: 1, alpha: 0.5)])
+        heightAnchor.constraint(equalToConstant: 50).isActive = true
         
+
         let bottomLine = UIView()
         addSubview(bottomLine)
         bottomLine.translatesAutoresizingMaskIntoConstraints = false
@@ -30,7 +33,7 @@ class CostumTextFields: UITextField {
         bottomLine.heightAnchor.constraint(equalToConstant: 2.0).isActive = true
         bottomLine.leftAnchor.constraint(equalTo: safeAreaLayoutGuide.leftAnchor).isActive = true
         bottomLine.rightAnchor.constraint(equalTo: safeAreaLayoutGuide.rightAnchor).isActive = true
-        bottomLine.bottomAnchor.constraint(equalTo: bottomAnchor,constant: 10).isActive = true
+        bottomLine.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
         
         isSecureTextEntry = isSecure!
         

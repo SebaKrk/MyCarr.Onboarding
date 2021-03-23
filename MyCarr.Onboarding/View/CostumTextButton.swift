@@ -12,10 +12,10 @@ class CostumTextButton: UIButton {
         super.init(frame: .zero)
         
         let atts: [NSAttributedString.Key : Any] = [.foregroundColor: UIColor(white: 1, alpha: 0.87),
-                                                    .font: UIFont(name: "Sen-Regular", size: 12)!]
+                                                    .font: UIFont(name: "Sen-Regular", size: 14)!]
         let attributedTtitle = NSMutableAttributedString(string: text1, attributes: atts)
         let boldAtts: [NSAttributedString.Key : Any] = [.foregroundColor: UIColor(white: 1, alpha: 0.87),
-                                                        .font: UIFont(name: "Sen-Bold", size: 14)!]
+                                                        .font: UIFont(name: "Sen-ExtraBold", size: 16)!]
         attributedTtitle.append(NSAttributedString(string: text2, attributes: boldAtts))
         setAttributedTitle(attributedTtitle, for: .normal)
     }
