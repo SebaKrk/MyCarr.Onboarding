@@ -24,6 +24,7 @@
 		93C2CAFA2607B7FC002C6714 /* Sen-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 93C2CAF72607B7FC002C6714 /* Sen-Regular.ttf */; };
 		93C2CAFB2607B7FC002C6714 /* Sen-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 93C2CAF82607B7FC002C6714 /* Sen-ExtraBold.ttf */; };
 		93C4CCBC26089BB30008C5B9 /* CostumTextFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C4CCBB26089BB30008C5B9 /* CostumTextFields.swift */; };
+		93F48598260A896E00454884 /* SendMailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F48597260A896E00454884 /* SendMailController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		93C2CAF72607B7FC002C6714 /* Sen-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sen-Regular.ttf"; sourceTree = "<group>"; };
 		93C2CAF82607B7FC002C6714 /* Sen-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sen-ExtraBold.ttf"; sourceTree = "<group>"; };
 		93C4CCBB26089BB30008C5B9 /* CostumTextFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CostumTextFields.swift; sourceTree = "<group>"; };
+		93F48597260A896E00454884 /* SendMailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendMailController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +152,7 @@
 			children = (
 				9367126026063EB200325659 /* LoginViewController.swift */,
 				9385E96C2609EB6700604F61 /* ResetPasswordController.swift */,
+				93F48597260A896E00454884 /* SendMailController.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -244,6 +247,7 @@
 				9367124926063E4A00325659 /* AppDelegate.swift in Sources */,
 				9385E9622608D2E700604F61 /* CostumButton.swift in Sources */,
 				9385E9652608D65C00604F61 /* CostumTextButton.swift in Sources */,
+				93F48598260A896E00454884 /* SendMailController.swift in Sources */,
 				9367124B26063E4A00325659 /* SceneDelegate.swift in Sources */,
 				9385E975260A12C000604F61 /* CostumRegistrationTF.swift in Sources */,
 				9385E96D2609EB6700604F61 /* ResetPasswordController.swift in Sources */,

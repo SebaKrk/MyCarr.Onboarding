@@ -26,7 +26,7 @@ class ResetPasswordController : UIViewController {
     private let emailTextField = CostumRegistrationTF(placeHolder: "Podaj swój email")
     
     private let resetButton : CostumButton = {
-        let button = CostumButton(title: "Wyslij magiczny link!", color: .inactiveGray(), textColor: .white, enable: false, type: .system)
+        let button = CostumButton(title: "Wyslij magiczny link!", color: .orangeGradient(), textColor: .white, enable: true, type: .system)
         button.addTarget(self, action: #selector(handleResetButton), for: .touchUpInside)
         return button
     }()
@@ -56,6 +56,8 @@ class ResetPasswordController : UIViewController {
     }
     @objc func handleResetButton() {
         print("DEBUG: - handle Reset Button")
+        let controller = SendMailController()
+        navigationController?.pushViewController(controller, animated: true)
     }
     
     //    MARK: - SetupConstraints
@@ -68,7 +70,6 @@ class ResetPasswordController : UIViewController {
         topView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor).isActive = true
         topView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor).isActive = true
         topView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.30).isActive = true
-        
         
         topView.addSubview(backButton)
         backButton.translatesAutoresizingMaskIntoConstraints = false
