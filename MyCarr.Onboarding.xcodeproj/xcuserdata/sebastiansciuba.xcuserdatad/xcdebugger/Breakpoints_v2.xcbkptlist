@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "0DDAA778-B06D-4F88-A953-919771DF386C"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E0BA5551-443A-459E-A25A-B23F9B7914D4"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyCarr.Onboarding/Controllers/Authentication/LoginViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "122"
+            endingLineNumber = "122"
+            landmarkName = "setupConstraints()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "73824C4D-CA5C-4F74-B827-517DC23B5924"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyCarr.Onboarding/Controllers/Authentication/LoginViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "165"
+            endingLineNumber = "165"
+            landmarkName = "setupConstraints()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A755D4CD-3FEA-4F3C-AA1A-5AD1715899C0"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyCarr.Onboarding/Controllers/Authentication/Login/ResetPasswordController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "backButton"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "A755D4CD-3FEA-4F3C-AA1A-5AD1715899C0 - 8cd2a18acc291efa"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; __C.UIButton in variable initialization expression of MyCarr_Onboarding.ResetPasswordController.(backButton in _141E917E0C33BDD275A28227A94DC857) : __C.UIButton"
+                  moduleName = "MyCarr.Onboarding"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sebastiansciuba/Documents/Programowanie%20/MateuszHalczak/MyCarr.Onboarding/MyCarr.Onboarding/Controllers/Authentication/Login/ResetPasswordController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "17"
+                  endingLineNumber = "17"
+                  offsetFromSymbolStart = "22">
+               </Location>
+               <Location
+                  uuid = "A755D4CD-3FEA-4F3C-AA1A-5AD1715899C0 - eca6d5dca096f232"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MyCarr_Onboarding.ResetPasswordController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; MyCarr_Onboarding.ResetPasswordController"
+                  moduleName = "MyCarr.Onboarding"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sebastiansciuba/Documents/Programowanie%20/MateuszHalczak/MyCarr.Onboarding/MyCarr.Onboarding/Controllers/Authentication/Login/ResetPasswordController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "333">
+               </Location>
+               <Location
+                  uuid = "A755D4CD-3FEA-4F3C-AA1A-5AD1715899C0 - 772be46ea1591475"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MyCarr_Onboarding.ResetPasswordController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;MyCarr_Onboarding.ResetPasswordController&gt;"
+                  moduleName = "MyCarr.Onboarding"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/sebastiansciuba/Documents/Programowanie%20/MateuszHalczak/MyCarr.Onboarding/MyCarr.Onboarding/Controllers/Authentication/Login/ResetPasswordController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "274">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BADAB692-165F-4722-9B08-35E30F4599AD"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MyCarr.Onboarding/Controllers/Authentication/Login/SendMailController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "handleBackButton()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

@@ -25,6 +25,7 @@
 		93C2CAFB2607B7FC002C6714 /* Sen-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 93C2CAF82607B7FC002C6714 /* Sen-ExtraBold.ttf */; };
 		93C4CCBC26089BB30008C5B9 /* CostumTextFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C4CCBB26089BB30008C5B9 /* CostumTextFields.swift */; };
 		93F48598260A896E00454884 /* SendMailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F48597260A896E00454884 /* SendMailController.swift */; };
+		93F4859C260AA30C00454884 /* RegistrationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F4859B260AA30C00454884 /* RegistrationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		93C2CAF82607B7FC002C6714 /* Sen-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sen-ExtraBold.ttf"; sourceTree = "<group>"; };
 		93C4CCBB26089BB30008C5B9 /* CostumTextFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CostumTextFields.swift; sourceTree = "<group>"; };
 		93F48597260A896E00454884 /* SendMailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendMailController.swift; sourceTree = "<group>"; };
+		93F4859B260AA30C00454884 /* RegistrationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +144,7 @@
 		937737F3260797D600BCA744 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
+				93F4859A260AA2F700454884 /* Registration */,
 				9385E96B2609EB4F00604F61 /* Login */,
 			);
 			path = Authentication;
@@ -165,6 +168,14 @@
 				93C2CAF72607B7FC002C6714 /* Sen-Regular.ttf */,
 			);
 			path = Font;
+			sourceTree = "<group>";
+		};
+		93F4859A260AA2F700454884 /* Registration */ = {
+			isa = PBXGroup;
+			children = (
+				93F4859B260AA30C00454884 /* RegistrationController.swift */,
+			);
+			path = Registration;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -239,6 +250,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93F4859C260AA30C00454884 /* RegistrationController.swift in Sources */,
 				93C4CCBC26089BB30008C5B9 /* CostumTextFields.swift in Sources */,
 				93C2CAF12607B115002C6714 /* CostumLabel.swift in Sources */,
 				9367126126063EB200325659 /* LoginViewController.swift in Sources */,

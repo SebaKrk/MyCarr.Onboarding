@@ -33,7 +33,9 @@ class SendMailController : UIViewController {
         button.addTarget(self, action: #selector(handleBackToMenuButton), for: .touchUpInside)
         return button
     }()
+    
     //    MARK: -  VieDidLoad
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
