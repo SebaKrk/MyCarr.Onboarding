@@ -177,6 +177,4 @@ class LoginViewController : UIViewController {
         logoImageLabel.centerYAnchor.constraint(equalTo: bottomView.centerYAnchor).isActive = true
         logoImageLabel.centerXAnchor.constraint(equalTo: bottomView.centerXAnchor).isActive = true
     }
-    
-    
 }

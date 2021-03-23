@@ -20,4 +20,3 @@ class CostumImageView : UIImageView {
         fatalError("init(coder:) has not been implemented")
     }
 }
-

@@ -37,3 +37,12 @@ extension UIViewController {
     }
 }
 
+extension UINavigationController {
+    open override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return .portrait
+    }
+    open override var shouldAutorotate: Bool {
+        return false
+    }
+}
+

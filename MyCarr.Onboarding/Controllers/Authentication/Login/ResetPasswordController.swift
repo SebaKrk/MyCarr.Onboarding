@@ -112,7 +112,5 @@ class ResetPasswordController : UIViewController {
         resetButton.centerXAnchor.constraint(equalTo: bottomView.centerXAnchor).isActive = true
         resetButton.leftAnchor.constraint(equalTo: bottomView.leftAnchor,constant: 42).isActive = true
         resetButton.rightAnchor.constraint(equalTo: bottomView.rightAnchor, constant: -42).isActive = true
-        
-        
     }
 }
