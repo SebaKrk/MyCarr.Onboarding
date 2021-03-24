@@ -98,6 +98,8 @@ class LoginViewController : UIViewController {
     }
     @objc func handleRegisterButton() {
         print("DEBUG: - Register Button")
+        let controller = RegistrationController()
+        navigationController?.pushViewController(controller, animated: true)
     }
     @objc func handleMailButton() {
         print("DEBUG: - Mail Button")
@@ -147,6 +149,7 @@ class LoginViewController : UIViewController {
         let stack2 = UIStackView(arrangedSubviews: [loginButton,registerButton])
         stack2.axis = .vertical
         stack2.spacing = 5
+
         
         scrollView.addSubview(stack2)
         stack2.translatesAutoresizingMaskIntoConstraints = false
