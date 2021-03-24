@@ -78,7 +78,7 @@ class RegistrationController : UIViewController {
     //    MARK: - Action
     
     @objc func handleBackButton() {
-        
+        navigationController?.popViewController(animated: true)
     }
     
     @objc func handleCreateButton() {
@@ -92,21 +92,18 @@ class RegistrationController : UIViewController {
     
     func setupView() {
         view.addSubview(topView)
-//        topView.backgroundColor = .red
         topView.translatesAutoresizingMaskIntoConstraints = false
         topView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
         topView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.15).isActive = true
         topView.widthAnchor.constraint(equalToConstant: view.frame.size.width).isActive = true
         
         view.addSubview(centerView)
-//        centerView.backgroundColor = .green
         centerView.translatesAutoresizingMaskIntoConstraints = false
         centerView.topAnchor.constraint(equalTo: topView.bottomAnchor).isActive = true
         centerView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.65).isActive = true
         centerView.widthAnchor.constraint(equalToConstant: view.frame.size.width).isActive = true
        
         view.addSubview(bottomView)
-//        bottomView.backgroundColor = .blue
         bottomView.translatesAutoresizingMaskIntoConstraints = false
         bottomView.topAnchor.constraint(equalTo: centerView.bottomAnchor).isActive = true
         bottomView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.2).isActive = true
@@ -134,6 +131,31 @@ class RegistrationController : UIViewController {
         stack.topAnchor.constraint(equalTo: centerView.topAnchor,constant: 20).isActive = true
         stack.leftAnchor.constraint(equalTo: centerView.leftAnchor, constant: 46).isActive = true
         stack.rightAnchor.constraint(equalTo: centerView.rightAnchor, constant: -46).isActive = true
+        
+        centerView.addSubview(termsLabel)
+        termsLabel.translatesAutoresizingMaskIntoConstraints = false
+        termsLabel.topAnchor.constraint(equalTo: stack.bottomAnchor,constant: 10).isActive = true
+        termsLabel.leftAnchor.constraint(equalTo: centerView.leftAnchor,constant: 46).isActive = true
+        termsLabel.widthAnchor.constraint(equalToConstant: 192).isActive = true
+        termsLabel.heightAnchor.constraint(equalToConstant: 40).isActive = true
+        
+        centerView.addSubview(termsSwitch)
+        termsSwitch.translatesAutoresizingMaskIntoConstraints = false
+        termsSwitch.centerYAnchor.constraint(equalTo: termsLabel.centerYAnchor).isActive = true
+        termsSwitch.trailingAnchor.constraint(equalTo: centerView.trailingAnchor,constant: -46).isActive = true
+        
+        centerView.addSubview(localizationLabel)
+        localizationLabel.translatesAutoresizingMaskIntoConstraints = false
+        localizationLabel.topAnchor.constraint(equalTo: termsLabel.bottomAnchor, constant: 20).isActive = true
+        localizationLabel.leftAnchor.constraint(equalTo: centerView.leftAnchor, constant: 46).isActive = true
+        localizationLabel.widthAnchor.constraint(equalToConstant: 192).isActive = true
+        localizationLabel.heightAnchor.constraint(equalToConstant: 40).isActive = true
+        
+        centerView.addSubview(LocalizationSwitch)
+        LocalizationSwitch.translatesAutoresizingMaskIntoConstraints = false
+        LocalizationSwitch.centerYAnchor.constraint(equalTo: localizationLabel.centerYAnchor).isActive = true
+        LocalizationSwitch.trailingAnchor.constraint(equalTo: centerView.trailingAnchor, constant: -44).isActive = true
+        
         
         bottomView.addSubview(createButton)
         createButton.translatesAutoresizingMaskIntoConstraints = false
