@@ -5,12 +5,13 @@
 //  Created by Sebastian Sciuba on 23/03/2021.
 //
 
+
 import UIKit
 
 class RegistrationController : UIViewController {
     
     let topView = UIView()
-    let centerView = UIView()
+    let scrollView = UIScrollView()
     let bottomView = UIView()
     
     private let backButton : UIButton = {
@@ -21,6 +22,7 @@ class RegistrationController : UIViewController {
         return button
     }()
     
+    
     private let registrationLabel = CostumLabel(title: "Rejestracja", size: 24, color: .black, line: 1)
     private let emailTextField = CostumRegistrationTF(placeHolder: "E-mail")
     private let nameTextField = CostumRegistrationTF(placeHolder: "Imię")
@@ -28,7 +30,7 @@ class RegistrationController : UIViewController {
     private let phoneTextField = CostumRegistrationTF(placeHolder: "Telefon")
     private let passwordTextField = CostumRegistrationTF(placeHolder: "Hasło")
     
-    private let termsLabel = CostumLabel(title: "Zgadzam sie z warunkami korzystania z aplikacji", size: 12, color: .inactiveGray(), line: 2)
+    private let termsLabel = CostumLabel(title: "Zgadzam sie z warunkami korzystania z aplikacji", size: 12, color: .inactiveGray(), line: 0)
     
     private let termsSwitch : UISwitch = {
         let sw = UISwitch()
@@ -36,7 +38,7 @@ class RegistrationController : UIViewController {
         return sw
     }()
     
-    private let localizationLabel = CostumLabel(title:  "Zgadzam się na udostępnienie mojej lokalizacji", size: 12, color: .inactiveGray(), line: 2)
+    private let localizationLabel = CostumLabel(title:  "Zgadzam się na udostępnienie mojej lokalizacji", size: 12, color: .inactiveGray(), line: 0)
     
     private let LocalizationSwitch : UISwitch = {
         let sw = UISwitch()
@@ -47,6 +49,7 @@ class RegistrationController : UIViewController {
     private let createButton : CostumButton = {
         let button = CostumButton(title: "Utwórz konto", color: .inactiveGray(), textColor: .white , enable: false, type: .system)
         button.addTarget(self, action: #selector(handleCreateButton), for: .touchUpInside)
+        button.heightAnchor.constraint(equalToConstant: 50).isActive = true
         return button
     }()
     
@@ -58,23 +61,16 @@ class RegistrationController : UIViewController {
         button.addTarget(self, action: #selector(handleLoginButton), for: .touchUpInside)
         return button
     }()
-    
-    
-    
     //    MARK: -  VieDidLoad
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureUI()
-    }
-    
-    //    MARK: - SetupView
-    func configureUI() {
-        view.backgroundColor = .white
+        
         setupView()
+        setupscrollView()
         setupConstraints()
+        
     }
-    
     //    MARK: - Action
     
     @objc func handleBackButton() {
@@ -88,33 +84,53 @@ class RegistrationController : UIViewController {
         
     }
     
-    //    MARK: - SetupConstraints
+    //    MARK: - SetupView
     
     func setupView() {
+        view.backgroundColor = .white
+        
         view.addSubview(topView)
         topView.translatesAutoresizingMaskIntoConstraints = false
         topView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
-        topView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.15).isActive = true
+        topView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.12).isActive = true
         topView.widthAnchor.constraint(equalToConstant: view.frame.size.width).isActive = true
         
-        view.addSubview(centerView)
-        centerView.translatesAutoresizingMaskIntoConstraints = false
-        centerView.topAnchor.constraint(equalTo: topView.bottomAnchor).isActive = true
-        centerView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.65).isActive = true
-        centerView.widthAnchor.constraint(equalToConstant: view.frame.size.width).isActive = true
-       
+        
         view.addSubview(bottomView)
         bottomView.translatesAutoresizingMaskIntoConstraints = false
-        bottomView.topAnchor.constraint(equalTo: centerView.bottomAnchor).isActive = true
-        bottomView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.2).isActive = true
+        bottomView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
+        bottomView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.3).isActive = true
         bottomView.widthAnchor.constraint(equalToConstant: view.frame.size.width).isActive = true
     }
-    func setupConstraints() {
-      
-        let stack = UIStackView(arrangedSubviews: [registrationLabel, emailTextField, nameTextField, lastnameTextField, phoneTextField, passwordTextField])
+    
+    //    MARK: - SetupConstraints / ScrollView
+    
+    func setupscrollView() {
+        
+        view.addSubview(scrollView)
+        scrollView.translatesAutoresizingMaskIntoConstraints = false
+        scrollView.topAnchor.constraint(equalTo: topView.bottomAnchor,constant: 10).isActive = true
+        scrollView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
+        scrollView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
+        scrollView.bottomAnchor.constraint(equalTo: bottomView.topAnchor).isActive = true
+        
+        let stack = UIStackView(arrangedSubviews: [emailTextField,nameTextField,lastnameTextField,phoneTextField,passwordTextField])
+        
+        scrollView.addSubview(stack)
+        
+        stack.translatesAutoresizingMaskIntoConstraints = false
         stack.axis = .vertical
-        stack.spacing = 30
         stack.distribution = .fillEqually
+        stack.spacing = 30
+        
+        stack.topAnchor.constraint(equalTo: scrollView.topAnchor).isActive = true
+        stack.centerXAnchor.constraint(equalTo: scrollView.centerXAnchor).isActive = true
+        stack.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor,constant: 25).isActive = true
+        stack.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor,constant: -25).isActive = true
+        stack.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor).isActive = true
+    }
+    
+    func setupConstraints() {
         
         topView.addSubview(backButton)
         backButton.translatesAutoresizingMaskIntoConstraints = false
@@ -125,47 +141,46 @@ class RegistrationController : UIViewController {
         registrationLabel.translatesAutoresizingMaskIntoConstraints = false
         registrationLabel.bottomAnchor.constraint(equalTo: topView.bottomAnchor).isActive = true
         registrationLabel.leftAnchor.constraint(equalTo: topView.leftAnchor, constant: 42).isActive = true
+            
         
-        centerView.addSubview(stack)
-        stack.translatesAutoresizingMaskIntoConstraints = false
-        stack.topAnchor.constraint(equalTo: centerView.topAnchor,constant: 20).isActive = true
-        stack.leftAnchor.constraint(equalTo: centerView.leftAnchor, constant: 46).isActive = true
-        stack.rightAnchor.constraint(equalTo: centerView.rightAnchor, constant: -46).isActive = true
-        
-        centerView.addSubview(termsLabel)
-        termsLabel.translatesAutoresizingMaskIntoConstraints = false
-        termsLabel.topAnchor.constraint(equalTo: stack.bottomAnchor,constant: 10).isActive = true
-        termsLabel.leftAnchor.constraint(equalTo: centerView.leftAnchor,constant: 46).isActive = true
-        termsLabel.widthAnchor.constraint(equalToConstant: 192).isActive = true
-        termsLabel.heightAnchor.constraint(equalToConstant: 40).isActive = true
-        
-        centerView.addSubview(termsSwitch)
+        let termsView = UIView()
+        termsView.addSubview(termsSwitch)
         termsSwitch.translatesAutoresizingMaskIntoConstraints = false
-        termsSwitch.centerYAnchor.constraint(equalTo: termsLabel.centerYAnchor).isActive = true
-        termsSwitch.trailingAnchor.constraint(equalTo: centerView.trailingAnchor,constant: -46).isActive = true
+        termsSwitch.rightAnchor.constraint(equalTo: termsView.rightAnchor).isActive = true
+        termsSwitch.centerYAnchor.constraint(equalTo: termsView.centerYAnchor).isActive = true
         
-        centerView.addSubview(localizationLabel)
-        localizationLabel.translatesAutoresizingMaskIntoConstraints = false
-        localizationLabel.topAnchor.constraint(equalTo: termsLabel.bottomAnchor, constant: 20).isActive = true
-        localizationLabel.leftAnchor.constraint(equalTo: centerView.leftAnchor, constant: 46).isActive = true
-        localizationLabel.widthAnchor.constraint(equalToConstant: 192).isActive = true
-        localizationLabel.heightAnchor.constraint(equalToConstant: 40).isActive = true
-        
-        centerView.addSubview(LocalizationSwitch)
+        let localizationView = UIView()
+        localizationView.addSubview(LocalizationSwitch)
         LocalizationSwitch.translatesAutoresizingMaskIntoConstraints = false
-        LocalizationSwitch.centerYAnchor.constraint(equalTo: localizationLabel.centerYAnchor).isActive = true
-        LocalizationSwitch.trailingAnchor.constraint(equalTo: centerView.trailingAnchor, constant: -44).isActive = true
+        LocalizationSwitch.rightAnchor.constraint(equalTo: localizationView.rightAnchor).isActive = true
+        LocalizationSwitch.centerYAnchor.constraint(equalTo: localizationView.centerYAnchor).isActive = true
+    
+        let termsStack = UIStackView(arrangedSubviews: [termsLabel,termsView])
+        termsStack.axis = .horizontal
+        termsStack.distribution = .fillEqually
         
+        let LocalizationStack = UIStackView(arrangedSubviews: [localizationLabel,localizationView])
+        LocalizationStack.axis = .horizontal
+        LocalizationStack.distribution = .fillEqually
         
-        bottomView.addSubview(createButton)
-        createButton.translatesAutoresizingMaskIntoConstraints = false
-        createButton.centerXAnchor.constraint(equalTo: bottomView.centerXAnchor).isActive = true
-        createButton.leftAnchor.constraint(equalTo: bottomView.leftAnchor,constant: 42).isActive = true
-        createButton.rightAnchor.constraint(equalTo: bottomView.rightAnchor, constant: -42).isActive = true
+        let switchStack = UIStackView(arrangedSubviews: [termsStack,LocalizationStack])
+        switchStack.axis = .vertical
+        switchStack.distribution = .fillEqually
         
-        bottomView.addSubview(loginButton)
-        loginButton.translatesAutoresizingMaskIntoConstraints = false
-        loginButton.topAnchor.constraint(equalTo: createButton.bottomAnchor, constant: 5).isActive = true
-        loginButton.centerXAnchor.constraint(equalTo: bottomView.centerXAnchor).isActive = true
+        let buttonStack = UIStackView(arrangedSubviews: [createButton,loginButton])
+        buttonStack.axis = .vertical
+        
+        let bottomStack = UIStackView(arrangedSubviews: [switchStack,buttonStack])
+        bottomStack.axis = .vertical
+        bottomStack.spacing = 15
+        bottomStack.distribution = .fillEqually
+        
+        bottomView.addSubview(bottomStack)
+        bottomStack.translatesAutoresizingMaskIntoConstraints = false
+        bottomStack.topAnchor.constraint(equalTo: bottomView.topAnchor).isActive = true
+        bottomStack.leftAnchor.constraint(equalTo: bottomView.leftAnchor,constant: 36).isActive = true
+        bottomStack.trailingAnchor.constraint(equalTo: bottomView.trailingAnchor,constant: -36).isActive = true
+        bottomStack.bottomAnchor.constraint(equalTo: bottomView.safeAreaLayoutGuide.bottomAnchor).isActive = true
+        
     }
 }

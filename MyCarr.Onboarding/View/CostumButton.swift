@@ -16,7 +16,7 @@ class CostumButton : UIButton {
         backgroundColor = color
         isEnabled = enable!
         layer.cornerRadius = 25
-        heightAnchor.constraint(equalToConstant: 48).isActive = true
+        heightAnchor.constraint(equalToConstant: 50).isActive = true
     }
     
     required init?(coder: NSCoder) {
