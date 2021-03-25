@@ -19,3 +19,20 @@ struct LoginViewModel : AuthenticationViewModel {
         return email?.isEmpty == false && password?.isEmpty == false
     }
 }
+
+struct RegistrationViewModel : AuthenticationViewModel {
+    var email : String?
+    var name : String?
+    var lastName: String?
+    var phone : String?
+    var password : String?
+    
+    var formIsValid: Bool {
+        return email?.isEmpty == false
+            && name?.isEmpty == false
+            && lastName?.isEmpty == false
+            && phone?.isEmpty == false
+            && password?.isEmpty == false
+        
+    }
+}

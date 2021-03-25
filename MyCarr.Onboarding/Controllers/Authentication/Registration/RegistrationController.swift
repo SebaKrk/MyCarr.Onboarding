@@ -14,6 +14,8 @@ class RegistrationController : UIViewController {
     let scrollView = UIScrollView()
     let bottomView = UIView()
     
+    private var viewModel = RegistrationViewModel()
+    
     private let backButton : UIButton = {
         let button = UIButton(type: .system)
         button.tintColor = .lightGray
@@ -69,6 +71,7 @@ class RegistrationController : UIViewController {
         setupView()
         setupscrollView()
         setupConstraints()
+        configureTextFieldObservers()
         
     }
     //    MARK: - Action
@@ -83,7 +86,20 @@ class RegistrationController : UIViewController {
     @objc func handleLoginButton() {
         
     }
-    
+    @objc func textDidChange(sender: UITextField) {
+        if sender == emailTextField {
+            viewModel.email = sender.text
+        } else if sender == nameTextField {
+            viewModel.name = sender.text
+        } else if sender == lastnameTextField {
+            viewModel.lastName = sender.text
+        } else if sender == phoneTextField {
+            viewModel.phone = sender.text
+        } else {
+            viewModel.password = sender.text
+        }
+        checkFormStatus()
+    }
     //    MARK: - SetupView
     
     func setupView() {
@@ -181,6 +197,25 @@ class RegistrationController : UIViewController {
         bottomStack.leftAnchor.constraint(equalTo: bottomView.leftAnchor,constant: 36).isActive = true
         bottomStack.trailingAnchor.constraint(equalTo: bottomView.trailingAnchor,constant: -36).isActive = true
         bottomStack.bottomAnchor.constraint(equalTo: bottomView.safeAreaLayoutGuide.bottomAnchor).isActive = true
-        
     }
+    //    MARK: - Helper
+        
+        func checkFormStatus() {
+            if viewModel.formIsValid {
+                createButton.isEnabled = true
+                createButton.backgroundColor = .primaryOrange()
+            } else {
+                createButton.isEnabled = false
+                createButton.backgroundColor = .inactiveGray()
+            }
+        }
+        
+        func configureTextFieldObservers() {
+            emailTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
+            nameTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
+            lastnameTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
+            phoneTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
+            passwordTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
+        }
+        
 }
