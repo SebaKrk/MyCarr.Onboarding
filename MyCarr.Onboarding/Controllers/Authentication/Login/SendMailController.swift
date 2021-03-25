@@ -23,7 +23,7 @@ class SendMailController : UIViewController {
     private let titleLabel = CostumLabel(title:"Mail został \nwysłany!", size: 48, color: .black, line: 2)
     private let secondLabel = CostumLabel(title: "Nie dostałes maila? \nWyslij ponownie.", size: 24, color: .black, line: 2)
     private let avatarImage = CostumImageView(imageName: "smileAvatar")
-    private let sendMailButton = CostumButton(title: "Wyślij ponownie", color: .orangeGradient(), textColor: .white, enable: false, type: .system)
+    private let sendMailButton = CostumButton(title: "Wyślij ponownie", color: .orangeGradient(), textColor: .white, enable: true, type: .system)
     
     private let backToMenuButton : UIButton = {
         let button = UIButton()

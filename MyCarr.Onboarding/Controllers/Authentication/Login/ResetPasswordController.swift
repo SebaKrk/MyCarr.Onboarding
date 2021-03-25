@@ -13,6 +13,8 @@ class ResetPasswordController : UIViewController {
     let centralView = UIView()
     let bottomView = UIView()
     
+    private var viewModel = ResetPasswordViewModel()
+    
     private let backButton : UIButton = {
         let button = UIButton(type: .system)
         button.tintColor = .lightGray
@@ -26,7 +28,7 @@ class ResetPasswordController : UIViewController {
     private let emailTextField = CostumRegistrationTF(placeHolder: "Podaj swój email")
     
     private let resetButton : CostumButton = {
-        let button = CostumButton(title: "Wyslij magiczny link!", color: .orangeGradient(), textColor: .white, enable: true, type: .system)
+        let button = CostumButton(title: "Wyslij magiczny link!", color: .inactiveGray(), textColor: .white, enable: false, type: .system)
         button.addTarget(self, action: #selector(handleResetButton), for: .touchUpInside)
         return button
     }()
@@ -40,6 +42,7 @@ class ResetPasswordController : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
+        configureTextFieldObservers()
     }
     
     //    MARK: - SetupView
@@ -58,6 +61,12 @@ class ResetPasswordController : UIViewController {
         print("DEBUG: - handle Reset Button")
         let controller = SendMailController()
         navigationController?.pushViewController(controller, animated: true)
+    }
+    @objc func textDidChange(sender: UITextField) {
+        if sender == emailTextField {
+            viewModel.email = sender.text
+        }
+        checkFormStatus()
     }
     
     //    MARK: - SetupConstraints
@@ -114,4 +123,19 @@ class ResetPasswordController : UIViewController {
         resetButton.leftAnchor.constraint(equalTo: bottomView.leftAnchor,constant: 42).isActive = true
         resetButton.rightAnchor.constraint(equalTo: bottomView.rightAnchor, constant: -42).isActive = true
     }
+    // MARK: - Helpers
+    
+        func checkFormStatus() {
+            if viewModel.formIsValid {
+                resetButton.isEnabled = true
+                resetButton.backgroundColor = .orangeGradient()
+            } else {
+                resetButton.isEnabled = false
+                resetButton.backgroundColor = .inactiveGray()
+            }
+        }
+        
+        func configureTextFieldObservers() {
+            emailTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
+        }
 }

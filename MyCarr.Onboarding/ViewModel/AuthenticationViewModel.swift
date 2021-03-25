@@ -36,3 +36,10 @@ struct RegistrationViewModel : AuthenticationViewModel {
         
     }
 }
+struct ResetPasswordViewModel: AuthenticationViewModel {
+    var email: String?
+    
+    var formIsValid: Bool {
+        return email?.isEmpty == false
+    }
+}

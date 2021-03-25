@@ -81,10 +81,10 @@ class RegistrationController : UIViewController {
     }
     
     @objc func handleCreateButton() {
-        
+        print("DEBUG: - Create Button")
     }
     @objc func handleLoginButton() {
-        
+        navigationController?.popViewController(animated: true)
     }
     @objc func textDidChange(sender: UITextField) {
         if sender == emailTextField {
