@@ -98,6 +98,8 @@ class LoginViewController : UIViewController {
     }
     @objc func handleLoginButton() {
         print("DEBUG: - Login Button")
+        let controller = MainViewController()
+        navigationController?.pushViewController(controller, animated: true)
     }
     @objc func handleRegisterButton() {
         print("DEBUG: - Register Button")
