@@ -11,6 +11,8 @@ class LoginViewController : UIViewController {
     
     let gradientLayer = CAGradientLayer()
     
+    private var viewModel = LoginViewModel()
+    
     let topView = UIView()
     let scrollView = UIScrollView()
     let bottomView = UIView()
@@ -77,6 +79,7 @@ class LoginViewController : UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
+        configureTextFieldObservers()
     }
     
     //    MARK: - SetupView
@@ -110,6 +113,16 @@ class LoginViewController : UIViewController {
     @objc func handleGmailButton() {
         print("DEBUG: - Gmail button")
     }
+    
+    @objc func textDidChange(sender: UITextField) {
+        if sender == emailTextField {
+            viewModel.email = sender.text
+        } else {
+            viewModel.password = sender.text
+        }
+        checkFormStatus()
+    }
+    
     
     //    MARK: - SetupConstraints
     
@@ -180,4 +193,26 @@ class LoginViewController : UIViewController {
         logoImageLabel.centerYAnchor.constraint(equalTo: bottomView.centerYAnchor).isActive = true
         logoImageLabel.centerXAnchor.constraint(equalTo: bottomView.centerXAnchor).isActive = true
     }
+    
+    // MARK: - Helpers
+        
+        func checkFormStatus() {
+            if viewModel.formIsValid {
+                loginButton.isEnabled = true
+                loginButton.backgroundColor = .white
+                loginButton.alpha = 1
+                loginButton.setTitleColor(.inactiveGray(), for: .normal)
+            } else {
+                loginButton.isEnabled = false
+                loginButton.backgroundColor = .white
+                loginButton.alpha = 0.5
+                loginButton.setTitleColor(.primaryOrange(), for: .normal)
+            }
+        }
+        
+        func configureTextFieldObservers() {
+            emailTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
+            passwordTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
+        }
 }
+
