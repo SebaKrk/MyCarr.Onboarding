@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		934FE803260CDB9E0083C515 /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934FE802260CDB9E0083C515 /* AuthenticationViewModel.swift */; };
 		9367124926063E4A00325659 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9367124826063E4A00325659 /* AppDelegate.swift */; };
 		9367124B26063E4A00325659 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9367124A26063E4A00325659 /* SceneDelegate.swift */; };
 		9367125226063E4C00325659 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9367125126063E4C00325659 /* Assets.xcassets */; };
@@ -29,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		934FE802260CDB9E0083C515 /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
 		9367124526063E4A00325659 /* MyCarr.Onboarding.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyCarr.Onboarding.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9367124826063E4A00325659 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9367124A26063E4A00325659 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 		937737EF2607972C00BCA744 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				934FE802260CDB9E0083C515 /* AuthenticationViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -256,6 +259,7 @@
 				9367126126063EB200325659 /* LoginViewController.swift in Sources */,
 				9385E9722609F80A00604F61 /* CostumImageView.swift in Sources */,
 				9385E9682609221C00604F61 /* CostumImageButton.swift in Sources */,
+				934FE803260CDB9E0083C515 /* AuthenticationViewModel.swift in Sources */,
 				9367124926063E4A00325659 /* AppDelegate.swift in Sources */,
 				9385E9622608D2E700604F61 /* CostumButton.swift in Sources */,
 				9385E9652608D65C00604F61 /* CostumTextButton.swift in Sources */,
