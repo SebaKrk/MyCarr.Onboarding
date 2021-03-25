@@ -14,6 +14,7 @@ class CostumLabel : UILabel {
         font = UIFont(name: "Sen-ExtraBold", size: size)
         textColor = color
         numberOfLines = line
+        
     }
     
     required init?(coder: NSCoder) {
