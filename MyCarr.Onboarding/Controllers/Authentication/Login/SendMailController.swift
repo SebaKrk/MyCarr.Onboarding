@@ -58,6 +58,8 @@ class SendMailController : UIViewController {
     
     @objc func handleBackToMenuButton() {
         print("DEBUG: - handle Menu Button")
+        let controller = LoginViewController()
+        navigationController?.pushViewController(controller, animated: true)
     }
     
     //    MARK: - SetupConstraints
