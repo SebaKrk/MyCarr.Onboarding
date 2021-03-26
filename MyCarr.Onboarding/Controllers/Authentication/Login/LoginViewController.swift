@@ -41,7 +41,7 @@ class LoginViewController : UIViewController {
     
     private let registerButton :CostumTextButton = {
         let button = CostumTextButton(text1: "nie masz jeszcze konta?  ", text2: "Zarejestruj się", type: .system)
-        button.titleLabel?.numberOfLines = 0
+        button.titleLabel?.numberOfLines = 1
         button.addTarget(self, action: #selector(handleRegisterButton), for: .touchUpInside)
         return button
     }()

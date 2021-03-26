@@ -30,7 +30,7 @@ class RegistrationController : UIViewController {
     private let nameTextField = CostumRegistrationTF(placeHolder: "Imię")
     private let lastnameTextField = CostumRegistrationTF(placeHolder: "Nazwisko")
     private let phoneTextField = CostumRegistrationTF(placeHolder: "Telefon")
-    
+    private let passwordTextField = CostumRegistrationTF(placeHolder: "Hasło")
     
     private let termsLabel = CostumLabel(title: "Zgadzam sie z warunkami korzystania z aplikacji", size: 12, color: .inactiveGray(), line: 0)
     
@@ -82,6 +82,16 @@ class RegistrationController : UIViewController {
     
     @objc func handleCreateButton() {
         print("DEBUG: - Create Button")
+        
+        guard let email = emailTextField.text else { return}
+        guard let name = nameTextField.text else { return}
+        guard let lastname = lastnameTextField.text else { return}
+        guard let phone = phoneTextField.text else { return}
+        guard let password = passwordTextField.text else { return}
+        
+        print("DEBUG: \(email),\(name),\(lastname),\(phone),\(password)")
+        
+        
         let controller = CarNameController()
         navigationController?.pushViewController(controller, animated: true)
         
@@ -98,7 +108,9 @@ class RegistrationController : UIViewController {
             viewModel.lastName = sender.text
         } else if sender == phoneTextField {
             viewModel.phone = sender.text
-        } 
+        } else if sender == passwordTextField {
+            viewModel.password = sender.text
+        }
         checkFormStatus()
     }
     //    MARK: - SetupView
@@ -131,7 +143,7 @@ class RegistrationController : UIViewController {
         scrollView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
         scrollView.bottomAnchor.constraint(equalTo: bottomView.topAnchor).isActive = true
         
-        let stack = UIStackView(arrangedSubviews: [emailTextField,nameTextField,lastnameTextField,phoneTextField])
+        let stack = UIStackView(arrangedSubviews: [emailTextField,nameTextField,lastnameTextField,phoneTextField,passwordTextField])
         
         scrollView.addSubview(stack)
         
@@ -158,7 +170,7 @@ class RegistrationController : UIViewController {
         registrationLabel.translatesAutoresizingMaskIntoConstraints = false
         registrationLabel.bottomAnchor.constraint(equalTo: topView.bottomAnchor).isActive = true
         registrationLabel.leftAnchor.constraint(equalTo: topView.leftAnchor, constant: 42).isActive = true
-            
+        
         
         let termsView = UIView()
         termsView.addSubview(termsSwitch)
@@ -171,7 +183,7 @@ class RegistrationController : UIViewController {
         LocalizationSwitch.translatesAutoresizingMaskIntoConstraints = false
         LocalizationSwitch.rightAnchor.constraint(equalTo: localizationView.rightAnchor).isActive = true
         LocalizationSwitch.centerYAnchor.constraint(equalTo: localizationView.centerYAnchor).isActive = true
-    
+        
         let termsStack = UIStackView(arrangedSubviews: [termsLabel,termsView])
         termsStack.axis = .horizontal
         termsStack.distribution = .fillEqually
@@ -200,22 +212,23 @@ class RegistrationController : UIViewController {
         bottomStack.bottomAnchor.constraint(equalTo: bottomView.safeAreaLayoutGuide.bottomAnchor).isActive = true
     }
     //    MARK: - Helper
-        
-        func checkFormStatus() {
-            if viewModel.formIsValid {
-                createButton.isEnabled = true
-                createButton.backgroundColor = .primaryOrange()
-            } else {
-                createButton.isEnabled = false
-                createButton.backgroundColor = .inactiveGray()
-            }
+    
+    func checkFormStatus() {
+        if viewModel.formIsValid {
+            createButton.isEnabled = true
+            createButton.backgroundColor = .primaryOrange()
+        } else {
+            createButton.isEnabled = false
+            createButton.backgroundColor = .inactiveGray()
         }
-        
-        func configureTextFieldObservers() {
-            emailTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
-            nameTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
-            lastnameTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
-            phoneTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
-        }
-        
+    }
+    
+    func configureTextFieldObservers() {
+        emailTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
+        nameTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
+        lastnameTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
+        phoneTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
+        passwordTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
+    }
+    
 }
