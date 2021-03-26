@@ -14,6 +14,8 @@ class CarNameController : UIViewController {
     let centerView2 = UIView()
     let bottomView = UIView()
     
+    private var viewModel = CarNameViewModel()
+    
     private let backButton : UIButton = {
         let button = UIButton(type: .system)
         button.tintColor = .lightGray
@@ -49,6 +51,7 @@ class CarNameController : UIViewController {
         
         setupView()
         setupConstraints()
+        configureTextFieldObservers()
     }
     
     //    MARK: -  Action
@@ -60,9 +63,18 @@ class CarNameController : UIViewController {
     
     @objc func handleCarName() {
         print("DEBUG: Create Name Car")
+        let controller = AztecCodeViewController()
+        navigationController?.pushViewController(controller, animated: true)
     }
     @objc func handleSkipButton() {
         print("DEBUG: skip button")
+    }
+    
+    @objc func textDidChange(sender: UITextField) {
+        if sender == carNameTextField {
+            viewModel.carName = sender.text
+        }
+        checkFormStatus()
     }
     
     //    MARK: - SetupView
@@ -138,6 +150,18 @@ class CarNameController : UIViewController {
     
     //    MARK: - Helper
     
-    
+    func checkFormStatus() {
+        if viewModel.formIsValid {
+            nextButton.isEnabled = true
+            nextButton.backgroundColor = .primaryOrange()
+   
+        } else {
+            nextButton.isEnabled = false
+            nextButton.backgroundColor = .inactiveGray()
+        }
+    }
+    func configureTextFieldObservers() {
+        carNameTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
+    }
     
 }

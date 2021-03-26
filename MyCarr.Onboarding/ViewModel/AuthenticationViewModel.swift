@@ -43,3 +43,12 @@ struct ResetPasswordViewModel: AuthenticationViewModel {
         return email?.isEmpty == false
     }
 }
+
+struct CarNameViewModel: AuthenticationViewModel {
+    var carName : String?
+    
+    var formIsValid: Bool {
+        return carName?.isEmpty == false
+    }
+}
+
