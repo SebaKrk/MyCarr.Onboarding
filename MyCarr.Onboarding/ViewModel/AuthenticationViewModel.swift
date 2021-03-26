@@ -32,7 +32,7 @@ struct RegistrationViewModel : AuthenticationViewModel {
             && name?.isEmpty == false
             && lastName?.isEmpty == false
             && phone?.isEmpty == false
-            && password?.isEmpty == false
+            
         
     }
 }

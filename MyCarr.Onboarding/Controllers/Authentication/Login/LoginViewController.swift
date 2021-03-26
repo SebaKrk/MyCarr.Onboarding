@@ -2,8 +2,9 @@
 //  LoginViewController.swift
 //  MyCarr.Onboarding
 //
-//  Created by Sebastian Sciuba on 20/03/2021.
+//  Created by Sebastian Sciuba on 25/03/2021.
 //
+
 
 import UIKit
 
@@ -40,6 +41,7 @@ class LoginViewController : UIViewController {
     
     private let registerButton :CostumTextButton = {
         let button = CostumTextButton(text1: "nie masz jeszcze konta?  ", text2: "Zarejestruj się", type: .system)
+        button.titleLabel?.numberOfLines = 0
         button.addTarget(self, action: #selector(handleRegisterButton), for: .touchUpInside)
         return button
     }()
@@ -217,4 +219,3 @@ class LoginViewController : UIViewController {
             passwordTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
         }
 }
-

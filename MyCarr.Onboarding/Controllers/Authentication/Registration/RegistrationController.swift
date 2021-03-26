@@ -30,13 +30,13 @@ class RegistrationController : UIViewController {
     private let nameTextField = CostumRegistrationTF(placeHolder: "Imię")
     private let lastnameTextField = CostumRegistrationTF(placeHolder: "Nazwisko")
     private let phoneTextField = CostumRegistrationTF(placeHolder: "Telefon")
-    private let passwordTextField = CostumRegistrationTF(placeHolder: "Hasło")
+    
     
     private let termsLabel = CostumLabel(title: "Zgadzam sie z warunkami korzystania z aplikacji", size: 12, color: .inactiveGray(), line: 0)
     
     private let termsSwitch : UISwitch = {
         let sw = UISwitch()
-        sw.onTintColor = .inactiveGray()
+        sw.onTintColor = .primaryOrange()
         return sw
     }()
     
@@ -44,7 +44,7 @@ class RegistrationController : UIViewController {
     
     private let LocalizationSwitch : UISwitch = {
         let sw = UISwitch()
-        sw.onTintColor = .inactiveGray()
+        sw.onTintColor = .primaryOrange()
         return sw
     }()
     
@@ -82,6 +82,9 @@ class RegistrationController : UIViewController {
     
     @objc func handleCreateButton() {
         print("DEBUG: - Create Button")
+        let controller = CarNameController()
+        navigationController?.pushViewController(controller, animated: true)
+        
     }
     @objc func handleLoginButton() {
         navigationController?.popViewController(animated: true)
@@ -95,9 +98,7 @@ class RegistrationController : UIViewController {
             viewModel.lastName = sender.text
         } else if sender == phoneTextField {
             viewModel.phone = sender.text
-        } else {
-            viewModel.password = sender.text
-        }
+        } 
         checkFormStatus()
     }
     //    MARK: - SetupView
@@ -130,7 +131,7 @@ class RegistrationController : UIViewController {
         scrollView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
         scrollView.bottomAnchor.constraint(equalTo: bottomView.topAnchor).isActive = true
         
-        let stack = UIStackView(arrangedSubviews: [emailTextField,nameTextField,lastnameTextField,phoneTextField,passwordTextField])
+        let stack = UIStackView(arrangedSubviews: [emailTextField,nameTextField,lastnameTextField,phoneTextField])
         
         scrollView.addSubview(stack)
         
@@ -141,8 +142,8 @@ class RegistrationController : UIViewController {
         
         stack.topAnchor.constraint(equalTo: scrollView.topAnchor).isActive = true
         stack.centerXAnchor.constraint(equalTo: scrollView.centerXAnchor).isActive = true
-        stack.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor,constant: 25).isActive = true
-        stack.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor,constant: -25).isActive = true
+        stack.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor,constant: 50).isActive = true
+        stack.trailingAnchor.constraint(equalTo: scrollView.trailingAnchor,constant: -50).isActive = true
         stack.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor).isActive = true
     }
     
@@ -215,7 +216,6 @@ class RegistrationController : UIViewController {
             nameTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
             lastnameTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
             phoneTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
-            passwordTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
         }
         
 }
