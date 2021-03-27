@@ -23,7 +23,6 @@ class VehicleDataViewController : UIViewController {
         return button
     }()
     
-    
     private let titleLabel = CostumLabel(title: "Dane pojazdu", size: 24, color: .black, line: 1)
     
     private let brandTextField = CostumTF(placeHolder: "wpisz marke pojazdu")
@@ -63,8 +62,10 @@ class VehicleDataViewController : UIViewController {
         navigationController?.popViewController(animated: true)
     }
     @objc func handleDoneButton() {
-        
+        let controller = CarAddedViewController()
+        navigationController?.pushViewController(controller, animated: true)
     }
+    
     @objc func textDidChange(sender: UITextField) {
         if sender == brandTextField {
             viewModel.brand = sender.text

@@ -24,6 +24,7 @@
 		9385E9722609F80A00604F61 /* CostumImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9385E9712609F80A00604F61 /* CostumImageView.swift */; };
 		9385E975260A12C000604F61 /* CostumTF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9385E974260A12C000604F61 /* CostumTF.swift */; };
 		93AD3041260F5F0D00397423 /* VehicleDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93AD3040260F5F0D00397423 /* VehicleDataViewController.swift */; };
+		93AD3045260F874F00397423 /* CarAddedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93AD3044260F874F00397423 /* CarAddedViewController.swift */; };
 		93C2CAF12607B115002C6714 /* CostumLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C2CAF02607B115002C6714 /* CostumLabel.swift */; };
 		93C2CAF92607B7FC002C6714 /* Sen-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 93C2CAF62607B7FC002C6714 /* Sen-Bold.ttf */; };
 		93C2CAFA2607B7FC002C6714 /* Sen-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 93C2CAF72607B7FC002C6714 /* Sen-Regular.ttf */; };
@@ -53,6 +54,7 @@
 		9385E9712609F80A00604F61 /* CostumImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CostumImageView.swift; sourceTree = "<group>"; };
 		9385E974260A12C000604F61 /* CostumTF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CostumTF.swift; sourceTree = "<group>"; };
 		93AD3040260F5F0D00397423 /* VehicleDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleDataViewController.swift; sourceTree = "<group>"; };
+		93AD3044260F874F00397423 /* CarAddedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarAddedViewController.swift; sourceTree = "<group>"; };
 		93C2CAF02607B115002C6714 /* CostumLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CostumLabel.swift; sourceTree = "<group>"; };
 		93C2CAF62607B7FC002C6714 /* Sen-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sen-Bold.ttf"; sourceTree = "<group>"; };
 		93C2CAF72607B7FC002C6714 /* Sen-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sen-Regular.ttf"; sourceTree = "<group>"; };
@@ -189,6 +191,7 @@
 				934FE80D260D194D0083C515 /* CarNameController.swift */,
 				934FE811260D41200083C515 /* AztecCodeViewController.swift */,
 				93AD3040260F5F0D00397423 /* VehicleDataViewController.swift */,
+				93AD3044260F874F00397423 /* CarAddedViewController.swift */,
 			);
 			path = Registration;
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 			files = (
 				93F4859C260AA30C00454884 /* RegistrationController.swift in Sources */,
 				93C4CCBC26089BB30008C5B9 /* CostumTextFields.swift in Sources */,
+				93AD3045260F874F00397423 /* CarAddedViewController.swift in Sources */,
 				93C2CAF12607B115002C6714 /* CostumLabel.swift in Sources */,
 				9385E9722609F80A00604F61 /* CostumImageView.swift in Sources */,
 				93AD3041260F5F0D00397423 /* VehicleDataViewController.swift in Sources */,

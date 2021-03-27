@@ -86,25 +86,25 @@ class AztecCodeViewController : UIViewController {
     
     func setupView() {
         view.backgroundColor = .white
-        
-        view.addSubview(topView)
-        topView.translatesAutoresizingMaskIntoConstraints = false
-        topView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
-        topView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.1).isActive = true
-        topView.widthAnchor.constraint(equalToConstant: view.frame.size.width).isActive = true
-        
-        view.addSubview(centerView)
-        centerView.translatesAutoresizingMaskIntoConstraints = false
-        centerView.topAnchor.constraint(equalTo: topView.bottomAnchor).isActive = true
-        centerView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.6).isActive = true
-        centerView.widthAnchor.constraint(equalToConstant: view.frame.size.width).isActive = true
-        
-        view.addSubview(bottomView)
-        bottomView.translatesAutoresizingMaskIntoConstraints = false
-        bottomView.topAnchor.constraint(equalTo: centerView.bottomAnchor).isActive = true
-        bottomView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.3).isActive = true
-        bottomView.widthAnchor.constraint(equalToConstant: view.frame.size.width).isActive = true
-        
+           
+           view.addSubview(topView)
+           topView.translatesAutoresizingMaskIntoConstraints = false
+           topView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
+           topView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.1).isActive = true
+           topView.widthAnchor.constraint(equalToConstant: view.frame.size.width).isActive = true
+           
+           view.addSubview(centerView)
+           centerView.translatesAutoresizingMaskIntoConstraints = false
+           centerView.topAnchor.constraint(equalTo: topView.bottomAnchor).isActive = true
+           centerView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.6).isActive = true
+           centerView.widthAnchor.constraint(equalToConstant: view.frame.size.width).isActive = true
+           
+           view.addSubview(bottomView)
+           bottomView.translatesAutoresizingMaskIntoConstraints = false
+           bottomView.topAnchor.constraint(equalTo: centerView.bottomAnchor).isActive = true
+           bottomView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.3).isActive = true
+           bottomView.widthAnchor.constraint(equalToConstant: view.frame.size.width).isActive = true
+           
     }
     
     //    MARK: - SetupConstraints
