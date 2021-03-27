@@ -36,7 +36,7 @@ class AztecCodeViewController : UIViewController {
     }()
     
     private let enterDataButton : CostumButton = {
-        let button = CostumButton(title: "Wpisz dane ręcznie", color: .white, textColor: .primaryOrange(), enable: false, type: .system)
+        let button = CostumButton(title: "Wpisz dane ręcznie", color: .white, textColor: .primaryOrange(), enable: true, type: .system)
         button.layer.borderWidth = 2
         button.layer.borderColor = UIColor.primaryOrange().cgColor
         button.addTarget(self, action: #selector(handleEnterDataButton), for: .touchUpInside)
@@ -67,10 +67,13 @@ class AztecCodeViewController : UIViewController {
         navigationController?.popViewController(animated: true)
     }
     @objc func handleSkanCodeButton() {
-        
+        print("DEBUG: Skan Code Button")
     }
     @objc func handleEnterDataButton() {
+        print("DEBUG: Enter DataB utton(")
         
+        let controller = VehicleDataViewController()
+        navigationController?.pushViewController(controller, animated: true)
     }
     @objc func handleSkipButton() {
         print("DEBUG: Skip Button")
@@ -87,20 +90,20 @@ class AztecCodeViewController : UIViewController {
         view.addSubview(topView)
         topView.translatesAutoresizingMaskIntoConstraints = false
         topView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
+        topView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.1).isActive = true
         topView.widthAnchor.constraint(equalToConstant: view.frame.size.width).isActive = true
-        topView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.2).isActive = true
-    
+        
         view.addSubview(centerView)
         centerView.translatesAutoresizingMaskIntoConstraints = false
         centerView.topAnchor.constraint(equalTo: topView.bottomAnchor).isActive = true
+        centerView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.6).isActive = true
         centerView.widthAnchor.constraint(equalToConstant: view.frame.size.width).isActive = true
-        centerView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.5).isActive = true
-               
+        
         view.addSubview(bottomView)
         bottomView.translatesAutoresizingMaskIntoConstraints = false
-        bottomView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
-        bottomView.widthAnchor.constraint(equalToConstant: view.frame.size.width).isActive = true
+        bottomView.topAnchor.constraint(equalTo: centerView.bottomAnchor).isActive = true
         bottomView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.3).isActive = true
+        bottomView.widthAnchor.constraint(equalToConstant: view.frame.size.width).isActive = true
         
     }
     
@@ -111,10 +114,10 @@ class AztecCodeViewController : UIViewController {
         backButton.translatesAutoresizingMaskIntoConstraints = false
         backButton.topAnchor.constraint(equalTo: topView.topAnchor).isActive = true
         backButton.leftAnchor.constraint(equalTo: topView.leftAnchor,constant: 16).isActive = true
-        
-        topView.addSubview(titleLabel)
+       
+        centerView.addSubview(titleLabel)
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
-        titleLabel.topAnchor.constraint(equalTo: backButton.bottomAnchor).isActive = true
+        titleLabel.topAnchor.constraint(equalTo: centerView.topAnchor).isActive = true
         titleLabel.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 42).isActive = true
         
         centerView.addSubview(imageAZTEC)
@@ -126,8 +129,7 @@ class AztecCodeViewController : UIViewController {
         
         bottomView.addSubview(skanCodeButton)
         skanCodeButton.translatesAutoresizingMaskIntoConstraints = false
-        skanCodeButton.centerXAnchor.constraint(equalTo: bottomView.centerXAnchor).isActive = true
-        skanCodeButton.centerYAnchor.constraint(equalTo: bottomView.centerYAnchor).isActive = true
+        skanCodeButton.topAnchor.constraint(equalTo: bottomView.topAnchor).isActive = true
         skanCodeButton.leftAnchor.constraint(equalTo: view.leftAnchor,constant: 46).isActive = true
         skanCodeButton.rightAnchor.constraint(equalTo: view.rightAnchor,constant: -46).isActive = true
         
@@ -142,11 +144,7 @@ class AztecCodeViewController : UIViewController {
         skipButton.topAnchor.constraint(equalTo: enterDataButton.bottomAnchor,constant: 10).isActive = true
         skipButton.leftAnchor.constraint(equalTo: view.leftAnchor,constant: 46).isActive = true
         skipButton.rightAnchor.constraint(equalTo: view.rightAnchor,constant: -46).isActive = true
-    
     }
-    
-    //    MARK: - Helper
-    
 }
 
 

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CostumRegistrationTF : UITextField {
+class CostumTF : UITextField {
     
     init(placeHolder : String) {
         super.init(frame: .zero)

@@ -28,7 +28,7 @@ class CarNameController : UIViewController {
     private let secondLabel = CostumLabel(title: "Jak nazwiesz swoj\npierwszy pojazd\nw aplikacji?",
                                           size: 24, color: .black, line: 0)
     private let avatarImage = CostumImageView(imageName: "smile2")
-    private let carNameTextField = CostumRegistrationTF(placeHolder: "Enter Car name")
+    private let carNameTextField = CostumTF(placeHolder: "Enter Car name")
     
     private let nextButton : CostumButton = {
         let button = CostumButton(title: "Dalej!", color: .inactiveGray() , textColor: .white, enable: false, type: .system)

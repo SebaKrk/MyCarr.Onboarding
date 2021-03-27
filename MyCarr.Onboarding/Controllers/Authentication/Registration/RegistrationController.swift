@@ -26,11 +26,11 @@ class RegistrationController : UIViewController {
     
     
     private let registrationLabel = CostumLabel(title: "Rejestracja", size: 24, color: .black, line: 1)
-    private let emailTextField = CostumRegistrationTF(placeHolder: "E-mail")
-    private let nameTextField = CostumRegistrationTF(placeHolder: "Imię")
-    private let lastnameTextField = CostumRegistrationTF(placeHolder: "Nazwisko")
-    private let phoneTextField = CostumRegistrationTF(placeHolder: "Telefon")
-    private let passwordTextField = CostumRegistrationTF(placeHolder: "Hasło")
+    private let emailTextField = CostumTF(placeHolder: "E-mail")
+    private let nameTextField = CostumTF(placeHolder: "Imię")
+    private let lastnameTextField = CostumTF(placeHolder: "Nazwisko")
+    private let phoneTextField = CostumTF(placeHolder: "Telefon")
+    private let passwordTextField = CostumTF(placeHolder: "Hasło")
     
     private let termsLabel = CostumLabel(title: "Zgadzam sie z warunkami korzystania z aplikacji", size: 12, color: .inactiveGray(), line: 0)
     

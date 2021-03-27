@@ -25,7 +25,7 @@ class ResetPasswordController : UIViewController {
     
     private let titleLabel = CostumLabel(title: "Nie \npamietam \nhasła", size: 48, color: .black, line: 3)
     private let avatarIamge = CostumImageView(imageName: "sadAvarar")
-    private let emailTextField = CostumRegistrationTF(placeHolder: "Podaj swój email")
+    private let emailTextField = CostumTF(placeHolder: "Podaj swój email")
     
     private let resetButton : CostumButton = {
         let button = CostumButton(title: "Wyslij magiczny link!", color: .inactiveGray(), textColor: .white, enable: false, type: .system)
