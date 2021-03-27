@@ -52,3 +52,21 @@ struct CarNameViewModel: AuthenticationViewModel {
     }
 }
 
+struct VehicleDataViewModel: AuthenticationViewModel {
+       
+    var brand : String?
+    var model : String?
+    var year : String?
+    var capacity : String?
+    var power: String?
+    var fueal: String?
+    
+    var formIsValid: Bool {
+        return brand?.isEmpty == false
+            && model?.isEmpty == false
+            && year?.isEmpty == false
+            && capacity?.isEmpty == false
+            && power?.isEmpty == false
+            && fueal?.isEmpty == false
+    }
+}

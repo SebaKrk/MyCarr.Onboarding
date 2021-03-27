@@ -93,7 +93,12 @@ class LoginViewController : UIViewController {
         navigationController?.pushViewController(controller, animated: true)
     }
     @objc func handleLoginButton() {
-        print("DEBUG: - Login Button")
+        
+        guard let email = emailTextField.text else { return}
+        guard let password = passwordTextField.text else { return}
+        
+        print("DEBUG: Login Button \(email),\(password)")
+        
         let controller = MainViewController()
         navigationController?.pushViewController(controller, animated: true)
     }

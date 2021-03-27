@@ -13,6 +13,8 @@ class VehicleDataViewController : UIViewController {
     let centerView = UIView()
     let bottomView = UIView()
     
+    private var viewModel = VehicleDataViewModel()
+    
     private let backButton : UIButton = {
         let button = UIButton(type: .system)
         button.tintColor = .lightGray
@@ -51,7 +53,7 @@ class VehicleDataViewController : UIViewController {
         super.viewDidLoad()
         setupView()
         setupConstraints()
-        
+        configureTextFieldObservers()
     }
     
     //    MARK: - Action
@@ -62,6 +64,22 @@ class VehicleDataViewController : UIViewController {
     }
     @objc func handleDoneButton() {
         
+    }
+    @objc func textDidChange(sender: UITextField) {
+        if sender == brandTextField {
+            viewModel.brand = sender.text
+        } else if sender == carModelTextField {
+            viewModel.model = sender.text
+        } else if sender == productionYearTextField {
+            viewModel.year = sender.text
+        } else if sender == engineCapacityTextFIeld{
+            viewModel.capacity = sender.text
+        } else if sender == enginePowerTextField{
+            viewModel.power = sender.text
+        } else {
+            viewModel.fueal = sender.text
+        }
+        checkFormStatus()
     }
     
     //    MARK: - SetupView
@@ -122,5 +140,23 @@ class VehicleDataViewController : UIViewController {
     }
     
     //    MARK: - Helper
+    func checkFormStatus() {
+        if viewModel.formIsValid {
+            doneButton.isEnabled = true
+            doneButton.backgroundColor = .primaryOrange()
+        } else {
+            doneButton.isEnabled = false
+            doneButton.backgroundColor = .inactiveGray()
+        }
+    }
+    
+    func configureTextFieldObservers() {
+        brandTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
+        carModelTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
+        productionYearTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
+        engineCapacityTextFIeld.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
+        enginePowerTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
+        fuelTypeTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
+    }
     
 }
