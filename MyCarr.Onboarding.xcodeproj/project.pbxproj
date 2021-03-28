@@ -157,8 +157,8 @@
 			isa = PBXGroup;
 			children = (
 				935078042610BBD5008C0E77 /* Massage */,
-				931922E626112AA00072B704 /* Main */,
 				937737F3260797D600BCA744 /* Authentication */,
+				931922E626112AA00072B704 /* Main */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
