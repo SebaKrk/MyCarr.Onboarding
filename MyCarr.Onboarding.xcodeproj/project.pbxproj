@@ -12,6 +12,7 @@
 		934FE80A260D173B0083C515 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934FE809260D173B0083C515 /* LoginViewController.swift */; };
 		934FE80E260D194D0083C515 /* CarNameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934FE80D260D194D0083C515 /* CarNameController.swift */; };
 		934FE812260D41200083C515 /* AztecCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934FE811260D41200083C515 /* AztecCodeViewController.swift */; };
+		935078062610BBF7008C0E77 /* ErrorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 935078052610BBF7008C0E77 /* ErrorViewController.swift */; };
 		9367124926063E4A00325659 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9367124826063E4A00325659 /* AppDelegate.swift */; };
 		9367124B26063E4A00325659 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9367124A26063E4A00325659 /* SceneDelegate.swift */; };
 		9367125226063E4C00325659 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9367125126063E4C00325659 /* Assets.xcassets */; };
@@ -40,6 +41,7 @@
 		934FE809260D173B0083C515 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		934FE80D260D194D0083C515 /* CarNameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarNameController.swift; sourceTree = "<group>"; };
 		934FE811260D41200083C515 /* AztecCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AztecCodeViewController.swift; sourceTree = "<group>"; };
+		935078052610BBF7008C0E77 /* ErrorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorViewController.swift; sourceTree = "<group>"; };
 		9367124526063E4A00325659 /* MyCarr.Onboarding.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyCarr.Onboarding.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9367124826063E4A00325659 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9367124A26063E4A00325659 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -75,6 +77,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		935078042610BBD5008C0E77 /* Massage */ = {
+			isa = PBXGroup;
+			children = (
+				935078052610BBF7008C0E77 /* ErrorViewController.swift */,
+			);
+			path = Massage;
+			sourceTree = "<group>";
+		};
 		9367123C26063E4A00325659 = {
 			isa = PBXGroup;
 			children = (
@@ -126,6 +136,7 @@
 		937737F02607972D00BCA744 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				935078042610BBD5008C0E77 /* Massage */,
 				937737F3260797D600BCA744 /* Authentication */,
 				934FE805260CE45B0083C515 /* MainViewController.swift */,
 			);
@@ -275,6 +286,7 @@
 				9385E9722609F80A00604F61 /* CostumImageView.swift in Sources */,
 				93AD3041260F5F0D00397423 /* VehicleDataViewController.swift in Sources */,
 				9385E9682609221C00604F61 /* CostumImageButton.swift in Sources */,
+				935078062610BBF7008C0E77 /* ErrorViewController.swift in Sources */,
 				934FE803260CDB9E0083C515 /* AuthenticationViewModel.swift in Sources */,
 				934FE806260CE45B0083C515 /* MainViewController.swift in Sources */,
 				9367124926063E4A00325659 /* AppDelegate.swift in Sources */,

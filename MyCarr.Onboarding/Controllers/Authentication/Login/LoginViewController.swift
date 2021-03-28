@@ -109,12 +109,18 @@ class LoginViewController : UIViewController {
     }
     @objc func handleMailButton() {
         print("DEBUG: - Mail Button")
+        let controller = ErrorViewController()
+        navigationController?.pushViewController(controller, animated: true)
     }
     @objc func handleFacebookButton() {
         print("DEBUG: - Facebook button")
+        let controller = ErrorViewController()
+        navigationController?.pushViewController(controller, animated: true)
     }
     @objc func handleGmailButton() {
         print("DEBUG: - Gmail button")
+        let controller = ErrorViewController()
+        navigationController?.pushViewController(controller, animated: true)
     }
     
     @objc func textDidChange(sender: UITextField) {
