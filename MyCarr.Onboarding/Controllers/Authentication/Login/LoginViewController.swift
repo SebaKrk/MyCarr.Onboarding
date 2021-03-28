@@ -167,8 +167,8 @@ class LoginViewController : UIViewController {
         
         topView.addSubview(titleLabel)
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
-        titleLabel.centerYAnchor.constraint(equalTo: topView.centerYAnchor).isActive = true
         titleLabel.centerXAnchor.constraint(equalTo: topView.centerXAnchor).isActive = true
+        titleLabel.bottomAnchor.constraint(equalTo: topView.bottomAnchor).isActive = true
         
         let stack = UIStackView(arrangedSubviews: [emailTextField,passwordTextField,forgetPasswordButton])
         stack.axis = .vertical
