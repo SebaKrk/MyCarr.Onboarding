@@ -12,11 +12,11 @@ class CostumTF : UITextField {
     init(placeHolder : String) {
         super.init(frame: .zero)
         
-        let spacer = UIView()
-        spacer.heightAnchor.constraint(equalToConstant: 50).isActive = true
-        spacer.widthAnchor.constraint(equalToConstant: 12).isActive = true
-        leftView = spacer
-        leftViewMode = .always
+//        let spacer = UIView()
+//        spacer.heightAnchor.constraint(equalToConstant: 50).isActive = true
+//        spacer.widthAnchor.constraint(equalToConstant: 12).isActive = true
+//        leftView = spacer
+//        leftViewMode = .always
         
         textColor = .primaryOrange()
         font = UIFont(name: "Sen-Regular", size: 16)

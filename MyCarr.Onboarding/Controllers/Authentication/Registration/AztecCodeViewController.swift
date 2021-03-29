@@ -30,7 +30,7 @@ class AztecCodeViewController : UIViewController {
         return image
     }()
     private let skanCodeButton : CostumButton = {
-        let button = CostumButton(title: "Skanuj kod AZTEC", color: .primaryOrange(), textColor: .white, enable: false, type: .system)
+        let button = CostumButton(title: "Skanuj kod AZTEC", color: .primaryOrange(), textColor: .white, enable: true, type: .system)
         button.addTarget(self, action: #selector(handleSkanCodeButton), for: .touchUpInside)
         return button
     }()
@@ -70,9 +70,10 @@ class AztecCodeViewController : UIViewController {
         print("DEBUG: Skan Code Button")
     }
     @objc func handleEnterDataButton() {
-        print("DEBUG: Enter DataB utton(")
+        print("DEBUG: Enter Data Button(")
         
-        let controller = VehicleDataViewController()
+//        let controller = VehicleDataViewController()
+        let controller = VehicleViewController()
         navigationController?.pushViewController(controller, animated: true)
     }
     @objc func handleSkipButton() {
