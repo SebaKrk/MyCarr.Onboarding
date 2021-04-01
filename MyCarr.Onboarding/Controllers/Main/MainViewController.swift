@@ -6,25 +6,39 @@
 //
 
 import UIKit
+import SideMenu
 
 class MainViewController: UITabBarController {
+    
+    var menu : SideMenuNavigationController?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupView()
+        setupSlideMenu()
     }
     
     //    MARK: - Action
     
     @objc func handleMenuToggle() {
         print("DEBUG: Slide Menu")
+        present(menu!, animated: true, completion: nil)
     }
     @objc func handleLoguOut() {
         print("DEBUG: Logout")
         navigationController?.pushViewController(LoginViewController(), animated: true)
     }
     
-//    MARK: - SetupView
+    //    MARK: SideMenu
+    
+    func setupSlideMenu() {
+        menu = SideMenuNavigationController(rootViewController: SideMenuVC())
+        menu?.leftSide = true
+        menu?.setNavigationBarHidden(true, animated: false)
+    }
+    
+    //    MARK: - SetupView
     
     func setupView() {
         

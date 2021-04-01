@@ -100,11 +100,8 @@ class TypeOfServiceViewController : UIViewController {
     func setupView() {
         view.backgroundColor = .white
         
-        
-        
         view.addSubview(topView)
         topView.translatesAutoresizingMaskIntoConstraints = false
-        topView.backgroundColor = .yellow
         topView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
         topView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
         topView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
@@ -124,10 +121,6 @@ class TypeOfServiceViewController : UIViewController {
     //    MARK: - SetupConstraints
 
     func setupConstraints() {
-//        topView.addSubview(backButton)
-//        backButton.translatesAutoresizingMaskIntoConstraints = false
-//        backButton.topAnchor.constraint(equalTo: topView.topAnchor).isActive = true
-//        backButton.leftAnchor.constraint(equalTo: topView.leftAnchor,constant: 16).isActive = true
         
         topView.addSubview(titleLabel)
         titleLabel.translatesAutoresizingMaskIntoConstraints = false

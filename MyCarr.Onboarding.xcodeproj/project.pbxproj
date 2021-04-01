@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -32,6 +32,8 @@
 		9385E96D2609EB6700604F61 /* ResetPasswordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9385E96C2609EB6700604F61 /* ResetPasswordController.swift */; };
 		9385E9722609F80A00604F61 /* CostumImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9385E9712609F80A00604F61 /* CostumImageView.swift */; };
 		9385E975260A12C000604F61 /* CostumTF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9385E974260A12C000604F61 /* CostumTF.swift */; };
+		93968A2B2615F3C50019CA8D /* SideMenu in Frameworks */ = {isa = PBXBuildFile; productRef = 93968A2A2615F3C50019CA8D /* SideMenu */; };
+		93968A2F2615F48E0019CA8D /* SideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93968A2E2615F48E0019CA8D /* SideMenuVC.swift */; };
 		93AD3041260F5F0D00397423 /* VehicleDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93AD3040260F5F0D00397423 /* VehicleDataViewController.swift */; };
 		93AD3045260F874F00397423 /* CarAddedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93AD3044260F874F00397423 /* CarAddedViewController.swift */; };
 		93C2CAF12607B115002C6714 /* CostumLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93C2CAF02607B115002C6714 /* CostumLabel.swift */; };
@@ -71,6 +73,7 @@
 		9385E96C2609EB6700604F61 /* ResetPasswordController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordController.swift; sourceTree = "<group>"; };
 		9385E9712609F80A00604F61 /* CostumImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CostumImageView.swift; sourceTree = "<group>"; };
 		9385E974260A12C000604F61 /* CostumTF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CostumTF.swift; sourceTree = "<group>"; };
+		93968A2E2615F48E0019CA8D /* SideMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuVC.swift; sourceTree = "<group>"; };
 		93AD3040260F5F0D00397423 /* VehicleDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleDataViewController.swift; sourceTree = "<group>"; };
 		93AD3044260F874F00397423 /* CarAddedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarAddedViewController.swift; sourceTree = "<group>"; };
 		93C2CAF02607B115002C6714 /* CostumLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CostumLabel.swift; sourceTree = "<group>"; };
@@ -87,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93968A2B2615F3C50019CA8D /* SideMenu in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,6 +100,7 @@
 		931922E626112AA00072B704 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				93968A2D2615F4710019CA8D /* SideMenu */,
 				934FE805260CE45B0083C515 /* MainViewController.swift */,
 				9301795426112B850032750F /* HomeViewController.swift */,
 				9301795726112C0E0032750F /* CalendarViewController.swift */,
@@ -224,6 +229,14 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		93968A2D2615F4710019CA8D /* SideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				93968A2E2615F48E0019CA8D /* SideMenuVC.swift */,
+			);
+			path = SideMenu;
+			sourceTree = "<group>";
+		};
 		93C2CAF52607B7D4002C6714 /* Font */ = {
 			isa = PBXGroup;
 			children = (
@@ -263,6 +276,9 @@
 			dependencies = (
 			);
 			name = MyCarr.Onboarding;
+			packageProductDependencies = (
+				93968A2A2615F3C50019CA8D /* SideMenu */,
+			);
 			productName = MyCarr.Onboarding;
 			productReference = 9367124526063E4A00325659 /* MyCarr.Onboarding.app */;
 			productType = "com.apple.product-type.application";
@@ -290,6 +306,9 @@
 				Base,
 			);
 			mainGroup = 9367123C26063E4A00325659;
+			packageReferences = (
+				93968A292615F3C50019CA8D /* XCRemoteSwiftPackageReference "SideMenu" */,
+			);
 			productRefGroup = 9367124626063E4A00325659 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -333,6 +352,7 @@
 				935078062610BBF7008C0E77 /* ErrorViewController.swift in Sources */,
 				931BF4FB2615AEC0003A7111 /* CostumSmallImage.swift in Sources */,
 				934FE803260CDB9E0083C515 /* AuthenticationViewModel.swift in Sources */,
+				93968A2F2615F48E0019CA8D /* SideMenuVC.swift in Sources */,
 				934FE806260CE45B0083C515 /* MainViewController.swift in Sources */,
 				931BF4FE2615AEED003A7111 /* DividerView.swift in Sources */,
 				9367124926063E4A00325659 /* AppDelegate.swift in Sources */,
@@ -541,6 +561,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		93968A292615F3C50019CA8D /* XCRemoteSwiftPackageReference "SideMenu" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jonkykong/SideMenu.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		93968A2A2615F3C50019CA8D /* SideMenu */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 93968A292615F3C50019CA8D /* XCRemoteSwiftPackageReference "SideMenu" */;
+			productName = SideMenu;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9367123D26063E4A00325659 /* Project object */;
 }
