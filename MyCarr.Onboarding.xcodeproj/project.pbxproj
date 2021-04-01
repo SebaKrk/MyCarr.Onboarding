@@ -13,6 +13,8 @@
 		9301795E26112C700032750F /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9301795D26112C700032750F /* ChatViewController.swift */; };
 		931BF4A12612719D003A7111 /* VehicleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931BF4A02612719D003A7111 /* VehicleViewController.swift */; };
 		931BF4F82615AA22003A7111 /* TypeOfServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931BF4F72615AA22003A7111 /* TypeOfServiceViewController.swift */; };
+		931BF4FB2615AEC0003A7111 /* CostumSmallImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931BF4FA2615AEC0003A7111 /* CostumSmallImage.swift */; };
+		931BF4FE2615AEED003A7111 /* DividerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931BF4FD2615AEED003A7111 /* DividerView.swift */; };
 		934FE803260CDB9E0083C515 /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934FE802260CDB9E0083C515 /* AuthenticationViewModel.swift */; };
 		934FE806260CE45B0083C515 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934FE805260CE45B0083C515 /* MainViewController.swift */; };
 		934FE80A260D173B0083C515 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934FE809260D173B0083C515 /* LoginViewController.swift */; };
@@ -48,6 +50,8 @@
 		9301795D26112C700032750F /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		931BF4A02612719D003A7111 /* VehicleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleViewController.swift; sourceTree = "<group>"; };
 		931BF4F72615AA22003A7111 /* TypeOfServiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeOfServiceViewController.swift; sourceTree = "<group>"; };
+		931BF4FA2615AEC0003A7111 /* CostumSmallImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CostumSmallImage.swift; sourceTree = "<group>"; };
+		931BF4FD2615AEED003A7111 /* DividerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DividerView.swift; sourceTree = "<group>"; };
 		934FE802260CDB9E0083C515 /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
 		934FE805260CE45B0083C515 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		934FE809260D173B0083C515 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -185,6 +189,8 @@
 				9385E9672609221C00604F61 /* CostumImageButton.swift */,
 				9385E9642608D65C00604F61 /* CostumTextButton.swift */,
 				9385E9712609F80A00604F61 /* CostumImageView.swift */,
+				931BF4FA2615AEC0003A7111 /* CostumSmallImage.swift */,
+				931BF4FD2615AEED003A7111 /* DividerView.swift */,
 				9385E974260A12C000604F61 /* CostumTF.swift */,
 			);
 			path = View;
@@ -325,8 +331,10 @@
 				9385E9682609221C00604F61 /* CostumImageButton.swift in Sources */,
 				9301795526112B850032750F /* HomeViewController.swift in Sources */,
 				935078062610BBF7008C0E77 /* ErrorViewController.swift in Sources */,
+				931BF4FB2615AEC0003A7111 /* CostumSmallImage.swift in Sources */,
 				934FE803260CDB9E0083C515 /* AuthenticationViewModel.swift in Sources */,
 				934FE806260CE45B0083C515 /* MainViewController.swift in Sources */,
+				931BF4FE2615AEED003A7111 /* DividerView.swift in Sources */,
 				9367124926063E4A00325659 /* AppDelegate.swift in Sources */,
 				9385E9622608D2E700604F61 /* CostumButton.swift in Sources */,
 				9385E9652608D65C00604F61 /* CostumTextButton.swift in Sources */,
