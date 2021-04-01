@@ -11,7 +11,7 @@ class TypeOfServiceViewController : UIViewController {
     
     let topView = UIView()
     let secondView = UIView()
-        
+    
     private let titleLabel = CostumLabel(title: "Czego\nszukasz ?", size: 42, color: .black, line: 2)
     
     private let carRepairImage = CostumSmallImage(imageName: "CarRepair")
@@ -43,7 +43,7 @@ class TypeOfServiceViewController : UIViewController {
         button.widthAnchor.constraint(equalToConstant: 50).isActive = true
         return button
     }()
-
+    
     private let carWashImage = CostumSmallImage(imageName: "CarWash")
     private let carWashLabel = CostumLabel(title: "Myjnia", size: 16, color: .black, line: 1)
     private  let carWashButton : UIButton = {
@@ -67,12 +67,9 @@ class TypeOfServiceViewController : UIViewController {
         
         setupView()
         setupConstraints()
-        
-        navigationController?.navigationBar.prefersLargeTitles = true
-        navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "back").withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(handleBackButton))
-       
+        setUpNavigationBar()
     }
-
+    
     //    MARK: - Action
     
     @objc func handleBackButton() {
@@ -96,7 +93,15 @@ class TypeOfServiceViewController : UIViewController {
         print("wyszukaj myjnie")
     }
     
+    //    MARK: - SetUpNavigationBar
+    
+    func setUpNavigationBar() {
+        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "back").withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(handleBackButton))
+    }
+    
     //    MARK: - SetupView
+    
     func setupView() {
         view.backgroundColor = .white
         
@@ -114,12 +119,10 @@ class TypeOfServiceViewController : UIViewController {
         secondView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
         secondView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
         secondView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
-        
     }
-    
-    
-    //    MARK: - SetupConstraints
 
+    //    MARK: - SetupConstraints
+    
     func setupConstraints() {
         
         topView.addSubview(titleLabel)
@@ -134,11 +137,11 @@ class TypeOfServiceViewController : UIViewController {
         let stack2 = UIStackView(arrangedSubviews: [vulcanizationImage,vulcanizationLabel,vulcanizationButton])
         stack2.axis = .horizontal
         stack2.spacing = 5
-
+        
         let stack3 = UIStackView(arrangedSubviews: [diagnosticStationImage,diagnosticStationLabel,diagnosticStationButton])
         stack3.axis = .horizontal
         stack3.spacing = 5
-
+        
         let stack4 = UIStackView(arrangedSubviews: [carWashImage,carWashLabel,carWashButton])
         stack4.axis = .horizontal
         stack4.spacing = 5

@@ -108,11 +108,10 @@ class SideMenuVC : UIViewController, UITableViewDelegate, UITableViewDataSource 
         case items[2]:
             print("DEBUG: Ustawienia")
         case items[3]:
-//            navigationController?.pushViewController(HelpCenterViewController(), animated: true)
             print("DEBUG: pomoc")
-//            let navVC = UINavigationController(rootViewController: HelpCenterViewController())
-//            navVC.modalPresentationStyle = .fullScreen
-//            present(navVC, animated: true )
+            let navVC = UINavigationController(rootViewController: HelpCenterViewController())
+            navVC.modalPresentationStyle = .fullScreen
+            present(navVC, animated: true )
          
         default:
             break
