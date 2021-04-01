@@ -90,6 +90,7 @@ class LoginViewController : UIViewController {
     @objc func handleForgetButton() {
         print("DEBUG: - Forget Button")
         let controller = ResetPasswordController()
+        controller.email = emailTextField.text
         navigationController?.pushViewController(controller, animated: true)
     }
     @objc func handleLoginButton() {

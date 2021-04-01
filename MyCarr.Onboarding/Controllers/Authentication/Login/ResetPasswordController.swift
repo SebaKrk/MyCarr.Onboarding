@@ -15,6 +15,8 @@ class ResetPasswordController : UIViewController {
     
     private var viewModel = ResetPasswordViewModel()
     
+    var email : String?
+    
     private let backButton : UIButton = {
         let button = UIButton(type: .system)
         button.tintColor = .lightGray
@@ -43,6 +45,7 @@ class ResetPasswordController : UIViewController {
         super.viewDidLoad()
         configureUI()
         configureTextFieldObservers()
+        loadEmail()
     }
     
     //    MARK: - SetupView
@@ -125,17 +128,25 @@ class ResetPasswordController : UIViewController {
     }
     // MARK: - Helpers
     
-        func checkFormStatus() {
-            if viewModel.formIsValid {
-                resetButton.isEnabled = true
-                resetButton.backgroundColor = .orangeGradient()
-            } else {
-                resetButton.isEnabled = false
-                resetButton.backgroundColor = .inactiveGray()
-            }
-        }
+    func loadEmail() {
+        guard let email = email else { return }
+        viewModel.email = email
+        emailTextField.text = email
         
-        func configureTextFieldObservers() {
-            emailTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
+        checkFormStatus()
+    }
+    
+    func checkFormStatus() {
+        if viewModel.formIsValid {
+            resetButton.isEnabled = true
+            resetButton.backgroundColor = .orangeGradient()
+        } else {
+            resetButton.isEnabled = false
+            resetButton.backgroundColor = .inactiveGray()
         }
+    }
+    
+    func configureTextFieldObservers() {
+        emailTextField.addTarget(self, action: #selector(textDidChange), for: .editingChanged)
+    }
 }
