@@ -45,13 +45,13 @@ class HomeViewController : UIViewController {
     }
     
     //    MARK: - Action
-    
-    @objc func handleBackButton() {
-        print("DEBUG: Back")
-        navigationController?.popViewController(animated: true)
-    }
+
     @objc func handleAppointmentButton() {
         print("DEBUG: book app")
+
+        let navVC = UINavigationController(rootViewController: TypeOfServiceViewController())
+        navVC.modalPresentationStyle = .fullScreen
+        present(navVC, animated: true )
     }
     
     @objc func handleParkingTickets() {
