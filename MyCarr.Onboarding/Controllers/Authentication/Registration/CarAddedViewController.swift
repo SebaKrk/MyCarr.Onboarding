@@ -58,6 +58,10 @@ class CarAddedViewController: UIViewController {
     }
     @objc func handleSearchButton() {
         print("DEBUG: Search")
+        let navVC = UINavigationController(rootViewController: TypeOfServiceViewController())
+        navVC.modalPresentationStyle = .fullScreen
+        present(navVC, animated: true )
+        
     }
     
     @objc func handlesecondButton() {
