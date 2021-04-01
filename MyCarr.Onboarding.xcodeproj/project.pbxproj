@@ -12,6 +12,7 @@
 		9301795B26112C3D0032750F /* NotificationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9301795A26112C3D0032750F /* NotificationsViewController.swift */; };
 		9301795E26112C700032750F /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9301795D26112C700032750F /* ChatViewController.swift */; };
 		931BF4A12612719D003A7111 /* VehicleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931BF4A02612719D003A7111 /* VehicleViewController.swift */; };
+		931BF4F82615AA22003A7111 /* TypeOfServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931BF4F72615AA22003A7111 /* TypeOfServiceViewController.swift */; };
 		934FE803260CDB9E0083C515 /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934FE802260CDB9E0083C515 /* AuthenticationViewModel.swift */; };
 		934FE806260CE45B0083C515 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934FE805260CE45B0083C515 /* MainViewController.swift */; };
 		934FE80A260D173B0083C515 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934FE809260D173B0083C515 /* LoginViewController.swift */; };
@@ -46,6 +47,7 @@
 		9301795A26112C3D0032750F /* NotificationsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsViewController.swift; sourceTree = "<group>"; };
 		9301795D26112C700032750F /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		931BF4A02612719D003A7111 /* VehicleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleViewController.swift; sourceTree = "<group>"; };
+		931BF4F72615AA22003A7111 /* TypeOfServiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeOfServiceViewController.swift; sourceTree = "<group>"; };
 		934FE802260CDB9E0083C515 /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
 		934FE805260CE45B0083C515 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		934FE809260D173B0083C515 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -95,8 +97,17 @@
 				9301795726112C0E0032750F /* CalendarViewController.swift */,
 				9301795A26112C3D0032750F /* NotificationsViewController.swift */,
 				9301795D26112C700032750F /* ChatViewController.swift */,
+				931BF4F62615AA00003A7111 /* Service */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		931BF4F62615AA00003A7111 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				931BF4F72615AA22003A7111 /* TypeOfServiceViewController.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 		935078042610BBD5008C0E77 /* Massage */ = {
@@ -308,6 +319,7 @@
 				93AD3045260F874F00397423 /* CarAddedViewController.swift in Sources */,
 				93C2CAF12607B115002C6714 /* CostumLabel.swift in Sources */,
 				9301795826112C0E0032750F /* CalendarViewController.swift in Sources */,
+				931BF4F82615AA22003A7111 /* TypeOfServiceViewController.swift in Sources */,
 				9385E9722609F80A00604F61 /* CostumImageView.swift in Sources */,
 				93AD3041260F5F0D00397423 /* VehicleDataViewController.swift in Sources */,
 				9385E9682609221C00604F61 /* CostumImageButton.swift in Sources */,

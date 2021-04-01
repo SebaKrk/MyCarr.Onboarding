@@ -12,8 +12,11 @@ class CostumImageView : UIImageView {
         super.init(frame: .zero)
         
         image = UIImage(named: imageName)
+        
         widthAnchor.constraint(equalToConstant: 156).isActive = true
         heightAnchor.constraint(equalToConstant: 168).isActive = true
+        
+//        contentMode = .scaleAspectFit
     }
     
     required init?(coder: NSCoder) {
