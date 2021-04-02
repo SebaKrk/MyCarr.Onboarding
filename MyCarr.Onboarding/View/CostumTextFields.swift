@@ -25,7 +25,7 @@ import UIKit
         placeholder = placeHolder
         attributedPlaceholder = NSAttributedString(string: placeHolder ,attributes: [.foregroundColor: UIColor(white: 1, alpha: 0.5)])
         heightAnchor.constraint(equalToConstant: 50).isActive = true
-        
+        keyboardType = .emailAddress
 
         let bottomLine = UIView()
         addSubview(bottomLine)

@@ -31,6 +31,8 @@ class RegistrationController : UIViewController {
     private let lastnameTextField = CostumTF(placeHolder: "Nazwisko")
     private let phoneTextField = CostumTF(placeHolder: "Telefon")
     private let passwordTextField = CostumTF(placeHolder: "Hasło")
+
+
     
     private let termsLabel = CostumLabel(title: "Zgadzam sie z warunkami korzystania z aplikacji", size: 12, color: .inactiveGray(), line: 0)
     
@@ -145,7 +147,7 @@ class RegistrationController : UIViewController {
         scrollView.bottomAnchor.constraint(equalTo: bottomView.topAnchor).isActive = true
         
         let stack = UIStackView(arrangedSubviews: [emailTextField,nameTextField,lastnameTextField,phoneTextField,passwordTextField])
-        
+        phoneTextField.keyboardType = .numberPad
         scrollView.addSubview(stack)
         
         stack.translatesAutoresizingMaskIntoConstraints = false

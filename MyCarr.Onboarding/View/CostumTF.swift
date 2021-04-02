@@ -22,6 +22,8 @@ class CostumTF : UITextField {
         font = UIFont(name: "Sen-Regular", size: 16)
         placeholder = placeHolder
         heightAnchor.constraint(equalToConstant: 50).isActive = true
+        keyboardType = .emailAddress
+        
         
         let bottomLine = UIView()
         addSubview(bottomLine)
