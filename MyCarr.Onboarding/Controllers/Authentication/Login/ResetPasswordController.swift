@@ -46,6 +46,7 @@ class ResetPasswordController : UIViewController {
         configureUI()
         configureTextFieldObservers()
         loadEmail()
+        self.dismissKeyboard()
     }
     
     //    MARK: - SetupView

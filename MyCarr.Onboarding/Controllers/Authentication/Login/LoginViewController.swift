@@ -83,6 +83,7 @@ class LoginViewController : UIViewController {
         super.viewDidLoad()
         configureTextFieldObservers()
         setupConstraints()
+        self.dismissKeyboard()
     }
     
     //    MARK: - Action

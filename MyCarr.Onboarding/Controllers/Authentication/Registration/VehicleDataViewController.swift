@@ -53,6 +53,7 @@ class VehicleDataViewController : UIViewController {
         setupView()
         setupConstraints()
         configureTextFieldObservers()
+        self.dismissKeyboard()
     }
     
     //    MARK: - Action

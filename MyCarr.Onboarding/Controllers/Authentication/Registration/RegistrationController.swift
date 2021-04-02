@@ -72,6 +72,7 @@ class RegistrationController : UIViewController {
         setupscrollView()
         setupConstraints()
         configureTextFieldObservers()
+        self.dismissKeyboard()
         
     }
     //    MARK: - Action

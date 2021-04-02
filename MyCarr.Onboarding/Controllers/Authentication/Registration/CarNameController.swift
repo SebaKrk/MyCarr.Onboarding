@@ -52,6 +52,7 @@ class CarNameController : UIViewController {
         setupView()
         setupConstraints()
         configureTextFieldObservers()
+        self.dismissKeyboard()
     }
     
     //    MARK: -  Action
