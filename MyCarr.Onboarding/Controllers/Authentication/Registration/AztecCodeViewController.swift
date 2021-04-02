@@ -71,8 +71,6 @@ class AztecCodeViewController : UIViewController {
     }
     @objc func handleEnterDataButton() {
         print("DEBUG: Enter Data Button(")
-        
-//        let controller = VehicleDataViewController()
         let controller = VehicleViewController()
         navigationController?.pushViewController(controller, animated: true)
     }

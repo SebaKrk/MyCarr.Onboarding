@@ -68,6 +68,8 @@ class CarNameController : UIViewController {
     }
     @objc func handleSkipButton() {
         print("DEBUG: skip button")
+        let controller = MainViewController()
+        navigationController?.pushViewController(controller, animated: true)
     }
     
     @objc func textDidChange(sender: UITextField) {

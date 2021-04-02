@@ -49,15 +49,15 @@ class ConversationTypeVC : UIViewController {
     //    MARK: - Action
     
     @objc func handlePhoneButton () {
-        print("phone button pressed")
+        print("DEBUG: phone button pressed")
     }
     
     @objc func handlechatIButton () {
-        print("chat button pressed")
+        print("DEBUG: chat button pressed")
     }
     
     @objc func handleBackButton () {
-        print("back button pressed")
+        print("DEBUG: back button pressed")
         dismiss(animated: true, completion: nil)
     }
     
@@ -87,7 +87,6 @@ class ConversationTypeVC : UIViewController {
         secondView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
         secondView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
         secondView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
-        
     }
     
 //    MARK: - SetupConstraints
