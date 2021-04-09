@@ -17,6 +17,7 @@ class MainViewController: UITabBarController {
         
         setupView()
         setupSlideMenu()
+
     }
     
     //    MARK: - Action

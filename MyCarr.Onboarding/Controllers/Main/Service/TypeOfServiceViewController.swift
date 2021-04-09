@@ -78,19 +78,19 @@ class TypeOfServiceViewController : UIViewController {
     }
     
     @objc func handleCarRepair() {
-        print("wyszukaj warsztat")
+        print("DEBUG: wyszukaj warsztat")
     }
     
     @objc func handleVulcanization() {
-        print("wyszukaj wulkanizacje")
+        print("DEBUG: wyszukaj wulkanizacje")
     }
     
     @objc func handleDiagnostic() {
-        print("wyszukaj stacje diagnostyczne")
+        print("DEBUG: wyszukaj stacje diagnostyczne")
     }
     
     @objc func handleCarWash() {
-        print("wyszukaj myjnie")
+        print("DEBUG: wyszukaj myjnie")
     }
     
     //    MARK: - SetUpNavigationBar

@@ -95,6 +95,7 @@ class HelpCenterViewController : UIViewController {
         topView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
         topView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.15).isActive = true
         
+        
         view.addSubview(secondView)
         secondView.translatesAutoresizingMaskIntoConstraints = false
         secondView.topAnchor.constraint(equalTo: topView.bottomAnchor).isActive = true

@@ -32,9 +32,9 @@ class HomeViewController : UIViewController {
     }()
     
     private let avatarImage = CostumImageView(imageName: "smile3")
-        
-//    MARK: - ViewDidLoad
-        
+    
+    //    MARK: - ViewDidLoad
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -42,13 +42,14 @@ class HomeViewController : UIViewController {
         setupConstraints()
         view.backgroundColor = .white
         navigationController?.navigationBar.prefersLargeTitles = true
+        
     }
     
     //    MARK: - Action
-
+    
     @objc func handleAppointmentButton() {
         print("DEBUG: book app")
-
+        
         let navVC = UINavigationController(rootViewController: TypeOfServiceViewController())
         navVC.modalPresentationStyle = .fullScreen
         present(navVC, animated: true )
@@ -57,8 +58,8 @@ class HomeViewController : UIViewController {
     @objc func handleParkingTickets() {
         print("DEBUG: buy parking ticket")
     }
-
-
+    
+    
     //    MARK: - SetupView
     
     func setupView() {
@@ -68,7 +69,7 @@ class HomeViewController : UIViewController {
         topView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
         topView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
         topView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.2).isActive = true
-    
+        
         view.addSubview(centerView)
         centerView.translatesAutoresizingMaskIntoConstraints = false
         centerView.topAnchor.constraint(equalTo: topView.bottomAnchor).isActive = true
