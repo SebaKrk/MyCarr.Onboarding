@@ -32,6 +32,9 @@
 		9385E96D2609EB6700604F61 /* ResetPasswordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9385E96C2609EB6700604F61 /* ResetPasswordController.swift */; };
 		9385E9722609F80A00604F61 /* CostumImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9385E9712609F80A00604F61 /* CostumImageView.swift */; };
 		9385E975260A12C000604F61 /* CostumTF.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9385E974260A12C000604F61 /* CostumTF.swift */; };
+		938FC43F262ED98A0028F943 /* MyCarsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938FC43E262ED98A0028F943 /* MyCarsViewController.swift */; };
+		938FC442262ED9D70028F943 /* CuponsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938FC441262ED9D70028F943 /* CuponsViewController.swift */; };
+		938FC446262ED9E80028F943 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938FC445262ED9E80028F943 /* SettingsViewController.swift */; };
 		93968A2B2615F3C50019CA8D /* SideMenu in Frameworks */ = {isa = PBXBuildFile; productRef = 93968A2A2615F3C50019CA8D /* SideMenu */; };
 		93968A2F2615F48E0019CA8D /* SideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93968A2E2615F48E0019CA8D /* SideMenuVC.swift */; };
 		93968A34261625EC0019CA8D /* HelpCenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93968A33261625EC0019CA8D /* HelpCenterViewController.swift */; };
@@ -76,6 +79,9 @@
 		9385E96C2609EB6700604F61 /* ResetPasswordController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordController.swift; sourceTree = "<group>"; };
 		9385E9712609F80A00604F61 /* CostumImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CostumImageView.swift; sourceTree = "<group>"; };
 		9385E974260A12C000604F61 /* CostumTF.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CostumTF.swift; sourceTree = "<group>"; };
+		938FC43E262ED98A0028F943 /* MyCarsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCarsViewController.swift; sourceTree = "<group>"; };
+		938FC441262ED9D70028F943 /* CuponsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CuponsViewController.swift; sourceTree = "<group>"; };
+		938FC445262ED9E80028F943 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		93968A2E2615F48E0019CA8D /* SideMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuVC.swift; sourceTree = "<group>"; };
 		93968A33261625EC0019CA8D /* HelpCenterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpCenterViewController.swift; sourceTree = "<group>"; };
 		93968A37261637360019CA8D /* ConversationTypeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationTypeVC.swift; sourceTree = "<group>"; };
@@ -247,6 +253,9 @@
 		93968A322616258E0019CA8D /* HelpCenter */ = {
 			isa = PBXGroup;
 			children = (
+				938FC43E262ED98A0028F943 /* MyCarsViewController.swift */,
+				938FC441262ED9D70028F943 /* CuponsViewController.swift */,
+				938FC445262ED9E80028F943 /* SettingsViewController.swift */,
 				93968A33261625EC0019CA8D /* HelpCenterViewController.swift */,
 				93968A37261637360019CA8D /* ConversationTypeVC.swift */,
 			);
@@ -358,11 +367,13 @@
 			files = (
 				93F4859C260AA30C00454884 /* RegistrationController.swift in Sources */,
 				931BF4A12612719D003A7111 /* VehicleViewController.swift in Sources */,
+				938FC43F262ED98A0028F943 /* MyCarsViewController.swift in Sources */,
 				93C4CCBC26089BB30008C5B9 /* CostumTextFields.swift in Sources */,
 				93AD3045260F874F00397423 /* CarAddedViewController.swift in Sources */,
 				93C2CAF12607B115002C6714 /* CostumLabel.swift in Sources */,
 				9301795826112C0E0032750F /* CalendarViewController.swift in Sources */,
 				931BF4F82615AA22003A7111 /* TypeOfServiceViewController.swift in Sources */,
+				938FC442262ED9D70028F943 /* CuponsViewController.swift in Sources */,
 				9385E9722609F80A00604F61 /* CostumImageView.swift in Sources */,
 				93968A34261625EC0019CA8D /* HelpCenterViewController.swift in Sources */,
 				93968A38261637360019CA8D /* ConversationTypeVC.swift in Sources */,
@@ -377,6 +388,7 @@
 				931BF4FE2615AEED003A7111 /* DividerView.swift in Sources */,
 				9367124926063E4A00325659 /* AppDelegate.swift in Sources */,
 				9385E9622608D2E700604F61 /* CostumButton.swift in Sources */,
+				938FC446262ED9E80028F943 /* SettingsViewController.swift in Sources */,
 				9385E9652608D65C00604F61 /* CostumTextButton.swift in Sources */,
 				9301795B26112C3D0032750F /* NotificationsViewController.swift in Sources */,
 				934FE80E260D194D0083C515 /* CarNameController.swift in Sources */,
