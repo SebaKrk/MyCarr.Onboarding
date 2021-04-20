@@ -12,15 +12,7 @@ class ErrorViewController : UIViewController {
     let topView = UIView()
     let centerView = UIView()
     let bottomView = UIView()
-    
-    private let backButton : UIButton = {
-        let button = UIButton(type: .system)
-        button.tintColor = .lightGray
-        button.addTarget(self, action: #selector(handleBackButton), for: .touchUpInside)
-        button.setImage(#imageLiteral(resourceName: "back"), for: .normal)
-        return button
-    }()
-    
+
     private let titleLabel = CostumLabel(title:"Caramba! \ncoś poszło \nnie tak", size: 48, color: .black, line: 3)
     
     private let avatarImage = CostumImageView(imageName: "errorAvatar")
@@ -79,15 +71,10 @@ class ErrorViewController : UIViewController {
     //    MARK: - SetupConstraints
     
     func setupConstraints() {
-        topView.addSubview(backButton)
-        backButton.translatesAutoresizingMaskIntoConstraints = false
-        backButton.topAnchor.constraint(equalTo: topView.topAnchor).isActive = true
-        backButton.leftAnchor.constraint(equalTo: topView.leftAnchor,constant: 16).isActive = true
-
         topView.addSubview(titleLabel)
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
-        titleLabel.topAnchor.constraint(equalTo: backButton.bottomAnchor,constant: 10).isActive = true
-        titleLabel.leftAnchor.constraint(equalTo: centerView.leftAnchor,constant: 42).isActive = true
+        titleLabel.topAnchor.constraint(equalTo: topView.topAnchor,constant: 20).isActive = true
+        titleLabel.leftAnchor.constraint(equalTo: topView.leftAnchor,constant: 42).isActive = true
         
         centerView.addSubview(avatarImage)
         avatarImage.translatesAutoresizingMaskIntoConstraints = false

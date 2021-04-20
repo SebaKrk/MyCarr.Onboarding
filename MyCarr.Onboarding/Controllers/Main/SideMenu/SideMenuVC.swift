@@ -102,7 +102,11 @@ class SideMenuVC : UIViewController, UITableViewDelegate, UITableViewDataSource 
         
         switch items[indexPath.row] {
         case items[0]:
-            print("DEBUG: historia pojazdu")
+            print("DEBUG: Moje pojazdy")
+            let navVC = UINavigationController(rootViewController: MyCarsViewController())
+            navVC.modalPresentationStyle = .fullScreen
+            present(navVC, animated: true )
+            
         case items[1]:
             print("DEBUG: kupony")
         case items[2]:
