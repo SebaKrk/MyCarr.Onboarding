@@ -36,6 +36,9 @@
 		938FC442262ED9D70028F943 /* CuponsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938FC441262ED9D70028F943 /* CuponsViewController.swift */; };
 		938FC446262ED9E80028F943 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938FC445262ED9E80028F943 /* SettingsViewController.swift */; };
 		938FC449262EDDF90028F943 /* CostumInfoLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938FC448262EDDF90028F943 /* CostumInfoLabel.swift */; };
+		938FC44C262EE4BD0028F943 /* ParkingTicketsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938FC44B262EE4BD0028F943 /* ParkingTicketsVC.swift */; };
+		938FC4F126316C790028F943 /* SmalLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938FC4F026316C790028F943 /* SmalLabel.swift */; };
+		938FC4F426316D1C0028F943 /* SmallButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 938FC4F326316D1C0028F943 /* SmallButton.swift */; };
 		93968A2B2615F3C50019CA8D /* SideMenu in Frameworks */ = {isa = PBXBuildFile; productRef = 93968A2A2615F3C50019CA8D /* SideMenu */; };
 		93968A2F2615F48E0019CA8D /* SideMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93968A2E2615F48E0019CA8D /* SideMenuVC.swift */; };
 		93968A34261625EC0019CA8D /* HelpCenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93968A33261625EC0019CA8D /* HelpCenterViewController.swift */; };
@@ -84,6 +87,9 @@
 		938FC441262ED9D70028F943 /* CuponsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CuponsViewController.swift; sourceTree = "<group>"; };
 		938FC445262ED9E80028F943 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		938FC448262EDDF90028F943 /* CostumInfoLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CostumInfoLabel.swift; sourceTree = "<group>"; };
+		938FC44B262EE4BD0028F943 /* ParkingTicketsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParkingTicketsVC.swift; sourceTree = "<group>"; };
+		938FC4F026316C790028F943 /* SmalLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmalLabel.swift; sourceTree = "<group>"; };
+		938FC4F326316D1C0028F943 /* SmallButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmallButton.swift; sourceTree = "<group>"; };
 		93968A2E2615F48E0019CA8D /* SideMenuVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuVC.swift; sourceTree = "<group>"; };
 		93968A33261625EC0019CA8D /* HelpCenterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpCenterViewController.swift; sourceTree = "<group>"; };
 		93968A37261637360019CA8D /* ConversationTypeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConversationTypeVC.swift; sourceTree = "<group>"; };
@@ -129,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				931BF4F72615AA22003A7111 /* TypeOfServiceViewController.swift */,
+				938FC44B262EE4BD0028F943 /* ParkingTicketsVC.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -202,7 +209,10 @@
 		937737F12607972F00BCA744 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				938FC4F326316D1C0028F943 /* SmallButton.swift */,
+				938FC4F026316C790028F943 /* SmalLabel.swift */,
 				93C2CAF02607B115002C6714 /* CostumLabel.swift */,
+				938FC448262EDDF90028F943 /* CostumInfoLabel.swift */,
 				93C4CCBB26089BB30008C5B9 /* CostumTextFields.swift */,
 				9385E9612608D2E700604F61 /* CostumButton.swift */,
 				9385E9672609221C00604F61 /* CostumImageButton.swift */,
@@ -211,7 +221,6 @@
 				931BF4FA2615AEC0003A7111 /* CostumSmallImage.swift */,
 				931BF4FD2615AEED003A7111 /* DividerView.swift */,
 				9385E974260A12C000604F61 /* CostumTF.swift */,
-				938FC448262EDDF90028F943 /* CostumInfoLabel.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -385,6 +394,7 @@
 				9301795526112B850032750F /* HomeViewController.swift in Sources */,
 				935078062610BBF7008C0E77 /* ErrorViewController.swift in Sources */,
 				931BF4FB2615AEC0003A7111 /* CostumSmallImage.swift in Sources */,
+				938FC44C262EE4BD0028F943 /* ParkingTicketsVC.swift in Sources */,
 				934FE803260CDB9E0083C515 /* AuthenticationViewModel.swift in Sources */,
 				93968A2F2615F48E0019CA8D /* SideMenuVC.swift in Sources */,
 				934FE806260CE45B0083C515 /* MainViewController.swift in Sources */,
@@ -394,12 +404,14 @@
 				938FC446262ED9E80028F943 /* SettingsViewController.swift in Sources */,
 				9385E9652608D65C00604F61 /* CostumTextButton.swift in Sources */,
 				9301795B26112C3D0032750F /* NotificationsViewController.swift in Sources */,
+				938FC4F426316D1C0028F943 /* SmallButton.swift in Sources */,
 				934FE80E260D194D0083C515 /* CarNameController.swift in Sources */,
 				938FC449262EDDF90028F943 /* CostumInfoLabel.swift in Sources */,
 				93F48598260A896E00454884 /* SendMailController.swift in Sources */,
 				9301795E26112C700032750F /* ChatViewController.swift in Sources */,
 				9367124B26063E4A00325659 /* SceneDelegate.swift in Sources */,
 				934FE812260D41200083C515 /* AztecCodeViewController.swift in Sources */,
+				938FC4F126316C790028F943 /* SmalLabel.swift in Sources */,
 				934FE80A260D173B0083C515 /* LoginViewController.swift in Sources */,
 				9385E975260A12C000604F61 /* CostumTF.swift in Sources */,
 				9385E96D2609EB6700604F61 /* ResetPasswordController.swift in Sources */,

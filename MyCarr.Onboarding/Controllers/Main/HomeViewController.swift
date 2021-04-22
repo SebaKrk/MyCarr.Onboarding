@@ -57,6 +57,9 @@ class HomeViewController : UIViewController {
     
     @objc func handleParkingTickets() {
         print("DEBUG: buy parking ticket")
+        let navVC = UINavigationController(rootViewController: ParkingTicketsVC())
+        navVC.modalPresentationStyle = .fullScreen
+        present(navVC, animated: true )
     }
     
     
