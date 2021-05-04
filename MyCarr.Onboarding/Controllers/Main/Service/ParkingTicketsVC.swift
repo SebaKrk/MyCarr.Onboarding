@@ -60,6 +60,9 @@ class ParkingTicketsVC : UIViewController {
     
     @objc func handleZoneButton() {
         print("DEBUG: handle ZoneButton")
+        let vc = UINavigationController(rootViewController: TicketZoneVC())
+        present(vc, animated: true, completion: nil)
+        
     }
     @objc func handleTicketTime() {
         print("DEBUG: handle TicketTime")
@@ -69,6 +72,8 @@ class ParkingTicketsVC : UIViewController {
     }
     @objc func handleBackButton() {
         print("DEBUG: handle back")
+        dismiss(animated: true, completion: nil)
+        
     }
     //    MARK: - SetupView
     
