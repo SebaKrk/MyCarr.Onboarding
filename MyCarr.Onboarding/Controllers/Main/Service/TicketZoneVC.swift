@@ -19,14 +19,26 @@ class TicketZoneVC : UIViewController, UITableViewDelegate, UITableViewDataSourc
     private let tableView = UITableView()
     private let items = ["Strefa A", "Strefa B", "Strefa C"]
     
-    private let cancleButton : SmallButton = {
-        let button = SmallButton(name: "Anuluj", type: .system)
+    private let cancleButton : UIButton = {
+        let button = UIButton(type: .system)
+        button.setTitle("Anuluj", for: .normal)
+        button.backgroundColor = .white
+        button.setTitleColor(.primaryOrange(), for: .normal)
+        button.titleLabel?.font = UIFont(name: "Sen-Bold", size: 18)
+        button.layer.cornerRadius = 20
+        button.layer.borderWidth = 2
+        button.layer.borderColor = UIColor.primaryOrange().cgColor
         button.addTarget(self, action: #selector(handleCancleButton), for: .touchUpInside)
         return button
     }()
     
-    private let applyButton : SmallButton = {
-        let button = SmallButton(name: "Zastosuj", type: .system)
+    private let applyButton :  UIButton = {
+        let button = UIButton(type: .system)
+        button.setTitle("Zastosuj", for: .normal)
+        button.backgroundColor = .primaryOrange()
+        button.setTitleColor(.white, for: .normal)
+        button.titleLabel?.font = UIFont(name: "Sen-Bold", size: 18)
+        button.layer.cornerRadius = 20
         button.addTarget(self, action: #selector(handleApplyButton), for: .touchUpInside)
         return button
     }()
@@ -50,6 +62,7 @@ class TicketZoneVC : UIViewController, UITableViewDelegate, UITableViewDataSourc
     
     @objc func handleCancleButton() {
         print("DEBUG: handleCancleButton pressed")
+        dismiss(animated: true, completion: nil)
     }
     @objc func handleApplyButton() {
         print("DEBUG: handleApplyButton pressed")
@@ -113,6 +126,14 @@ class TicketZoneVC : UIViewController, UITableViewDelegate, UITableViewDataSourc
         centerView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
         centerView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.6).isActive = true
     
+        centerView.addSubview(tableView)
+        tableView.translatesAutoresizingMaskIntoConstraints = false
+        tableView.topAnchor.constraint(equalTo: centerView.topAnchor,constant: 30).isActive = true
+        tableView.leadingAnchor.constraint(equalTo: centerView.leadingAnchor,constant: 30).isActive = true
+        tableView.trailingAnchor.constraint(equalTo: centerView.trailingAnchor,constant: -30).isActive = true
+        tableView.bottomAnchor.constraint(equalTo: centerView.bottomAnchor,constant: -30).isActive = true
+        
+        
         view.addSubview(bottomView)
         bottomView.translatesAutoresizingMaskIntoConstraints = false
         bottomView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
@@ -120,6 +141,20 @@ class TicketZoneVC : UIViewController, UITableViewDelegate, UITableViewDataSourc
         bottomView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
         bottomView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.2).isActive = true
         
+        let stack = UIStackView(arrangedSubviews: [cancleButton,applyButton])
+        stack.axis = .horizontal
+        stack.spacing = 15
+        
+        cancleButton.widthAnchor.constraint(equalToConstant: 104).isActive = true
+        cancleButton.heightAnchor.constraint(equalToConstant: 40).isActive = true
+        
+        applyButton.widthAnchor.constraint(equalToConstant: 104).isActive = true
+        applyButton.heightAnchor.constraint(equalToConstant: 40).isActive = true
+        
+        bottomView.addSubview(stack)
+        stack.translatesAutoresizingMaskIntoConstraints = false
+        stack.centerYAnchor.constraint(equalTo: bottomView.centerYAnchor).isActive = true
+        stack.centerXAnchor.constraint(equalTo: bottomView.centerXAnchor).isActive = true
     }
     
 }
