@@ -215,7 +215,7 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "21212F8C-FBFB-4D63-B4F6-70FCF864198D"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MyCarr.Onboarding/ViewModel/AuthenticationViewModel.swift"

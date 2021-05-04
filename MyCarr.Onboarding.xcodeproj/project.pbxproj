@@ -15,6 +15,7 @@
 		931BF4F82615AA22003A7111 /* TypeOfServiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931BF4F72615AA22003A7111 /* TypeOfServiceViewController.swift */; };
 		931BF4FB2615AEC0003A7111 /* CostumSmallImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931BF4FA2615AEC0003A7111 /* CostumSmallImage.swift */; };
 		931BF4FE2615AEED003A7111 /* DividerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931BF4FD2615AEED003A7111 /* DividerView.swift */; };
+		9329FB672641D0A700A603C9 /* TicketZoneVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9329FB662641D0A700A603C9 /* TicketZoneVC.swift */; };
 		934FE803260CDB9E0083C515 /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934FE802260CDB9E0083C515 /* AuthenticationViewModel.swift */; };
 		934FE806260CE45B0083C515 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934FE805260CE45B0083C515 /* MainViewController.swift */; };
 		934FE80A260D173B0083C515 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 934FE809260D173B0083C515 /* LoginViewController.swift */; };
@@ -64,6 +65,7 @@
 		931BF4F72615AA22003A7111 /* TypeOfServiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeOfServiceViewController.swift; sourceTree = "<group>"; };
 		931BF4FA2615AEC0003A7111 /* CostumSmallImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CostumSmallImage.swift; sourceTree = "<group>"; };
 		931BF4FD2615AEED003A7111 /* DividerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DividerView.swift; sourceTree = "<group>"; };
+		9329FB662641D0A700A603C9 /* TicketZoneVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TicketZoneVC.swift; sourceTree = "<group>"; };
 		934FE802260CDB9E0083C515 /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
 		934FE805260CE45B0083C515 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		934FE809260D173B0083C515 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 			children = (
 				931BF4F72615AA22003A7111 /* TypeOfServiceViewController.swift */,
 				938FC44B262EE4BD0028F943 /* ParkingTicketsVC.swift */,
+				9329FB662641D0A700A603C9 /* TicketZoneVC.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -407,6 +410,7 @@
 				938FC4F426316D1C0028F943 /* SmallButton.swift in Sources */,
 				934FE80E260D194D0083C515 /* CarNameController.swift in Sources */,
 				938FC449262EDDF90028F943 /* CostumInfoLabel.swift in Sources */,
+				9329FB672641D0A700A603C9 /* TicketZoneVC.swift in Sources */,
 				93F48598260A896E00454884 /* SendMailController.swift in Sources */,
 				9301795E26112C700032750F /* ChatViewController.swift in Sources */,
 				9367124B26063E4A00325659 /* SceneDelegate.swift in Sources */,
