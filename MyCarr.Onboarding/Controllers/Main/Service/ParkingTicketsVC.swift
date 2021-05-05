@@ -66,6 +66,8 @@ class ParkingTicketsVC : UIViewController {
     }
     @objc func handleTicketTime() {
         print("DEBUG: handle TicketTime")
+        let vc = UINavigationController(rootViewController: TimeTicketZoneVC())
+        present(vc, animated: true, completion: nil)
     }
     @objc func handleNext() {
         print("DEBUG: handle Next")
